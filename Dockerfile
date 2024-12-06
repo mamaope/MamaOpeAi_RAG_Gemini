@@ -3,9 +3,6 @@ FROM python:3.11-slim
 # Set working directory
 WORKDIR /app
 
-# Copy the .env file
-COPY .env .
-
 # Install system dependencies required for faiss-cpu
 RUN apt-get update && apt-get install -y \
     build-essential \
