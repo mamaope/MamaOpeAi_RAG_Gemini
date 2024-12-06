@@ -1,0 +1,1374 @@
+[
+    {
+        "id": "doc_0",
+        "document": "Rapid communication on updated guidance on the management of tuberculosis in children and adolescents\n\n  \n\nRapid communication on updated guidance on the management of tuberculosis in children and adolescents\n\nISBN 978-92-4-003345-0 (electronic version) ISBN 978-92-4-003346-7 (print version)"
+    },
+    {
+        "id": "doc_1",
+        "document": "\u00a9 World Health Organization 2021\n\nSome rights reserved. This work is available under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 IGO licence (CC BY-NC-SA 3.0 IGO; https://creativecommons.org/licenses/by-nc-sa/3.0/igo)."
+    },
+    {
+        "id": "doc_2",
+        "document": "Under the terms of this licence, you may copy, redistribute and adapt the work for non-commercial purposes, provided the work is appropriately cited, as indicated below. In any use of this work, there should be no suggestion that WHO endorses any specific organization, products or services. The use of the WHO logo is not permitted. If you adapt the work, then you must license your work under the same or equivalent Creative Commons licence. If you create a translation of this work, you should add"
+    },
+    {
+        "id": "doc_3",
+        "document": "the following disclaimer along with the suggested citation: \u201cThis translation was not created by the World Health Organization (WHO). WHO is not responsible for the content or accuracy of this translation. The original English edition shall be the binding and authentic edition\u201d."
+    },
+    {
+        "id": "doc_4",
+        "document": "Any mediation relating to disputes arising under the licence shall be conducted in accordance with the mediation rules of the World Intellectual Property Organization (http://www.wipo.int/amc/en/mediation/rules/).\n\nSuggested citation. Rapid communication on updated guidance on the management of tuberculosis in children and adolescents. Geneva: World Health Organization; 2021. Licence: CC BY-NC-SA 3.0 IGO.\n\nCataloguing-in-Publication (CIP) data. CIP data are available at http://apps.who.int/iris."
+    },
+    {
+        "id": "doc_5",
+        "document": "Sales, rights and licensing. To purchase WHO publications, see http://apps.who.int/bookorders. To submit requests for commercial use and queries on rights and licensing, see http://www.who.int/about/licensing."
+    },
+    {
+        "id": "doc_6",
+        "document": "Third-party materials. If you wish to reuse material from this work that is attributed to a third party, such as tables, figures or images, it is your responsibility to determine whether permission is needed for that reuse and to obtain permission from the copyright holder. The risk of claims resulting from infringement of any third-party- owned component in the work rests solely with the user."
+    },
+    {
+        "id": "doc_7",
+        "document": "General disclaimers. The designations employed and the presentation of the material in this publication do not imply the expression of any opinion whatsoever on the part of WHO concerning the legal status of any country, territory, city or area or of its authorities, or concerning the delimitation of its frontiers or boundaries. Dotted and dashed lines on maps represent approximate border lines for which there may not yet be full agreement."
+    },
+    {
+        "id": "doc_8",
+        "document": "The mention of specific companies or of certain manufacturers\u2019 products does not imply that they are endorsed or recommended by WHO in preference to others of a similar nature that are not mentioned. Errors and omissions excepted, the names of proprietary products are distinguished by initial capital letters."
+    },
+    {
+        "id": "doc_9",
+        "document": "All reasonable precautions have been taken by WHO to verify the information contained in this publication. However, the published material is being distributed without warranty of any kind, either expressed or implied. The responsibility for the interpretation and use of the material lies with the reader. In no event shall WHO be liable for damages arising from its use.\n\nBackground"
+    },
+    {
+        "id": "doc_10",
+        "document": "Children and young adolescents (aged from 0 - 14 years; for monitoring and evaluation purposes collectively referred to as children1) represent approximately 12% of all tuberculosis (TB) patients globally, with 1.2 million children becoming ill with TB every year, and 230,000 estimated to have died of TB in 2019.2 Between 25,000 and 32,000 children are estimated to develop multi-drug resistant TB (MDR-TB) every year.3, 4 Over half of the children with TB are not diagnosed or are not reported."
+    },
+    {
+        "id": "doc_11",
+        "document": "This case detection gap is largest in young children; 65% of children aged below 5 years of age are not detected. As well, only one third of household contacts aged below 5 who were eligible for TB preventive treatment (TPT) in 2019 received it.2"
+    },
+    {
+        "id": "doc_12",
+        "document": "The political declaration of the 2018 United Nations General Assembly High Level Meeting on the Fight Against TB commits, among others, to diagnosing and treating 40 million people with TB, including 3.5 million children, and 1.5 million people with drug-resistant TB, including 115,000 children.5 It also commits to providing at least 30 million people - including 4 million children under 5 years of age, 20 million other household contacts (including children over the age of 5 years) and 6"
+    },
+    {
+        "id": "doc_13",
+        "document": "million people living with HIV (including children) - with TB preventive treatment by 2022.5 In order to achieve these ambitious targets, there is an urgent need to improve prevention, diagnosis, treatment and care for children and adolescents with TB or at risk of developing it."
+    },
+    {
+        "id": "doc_14",
+        "document": "To support countries in responding to the challenges of TB, WHO\u2019s Global Tuberculosis Programme develops guidance on prevention, diagnosis, treatment, and care of people with TB, including for children and adolescents. The first edition of Guidance for national tuberculosis programmes on the management of tuberculosis in children was published in 2006, after which a Rapid Advice on the treatment of tuberculosis in children was released in 2010. In 2014, WHO published the second edition of the"
+    },
+    {
+        "id": "doc_15",
+        "document": "Guidance for national tuberculosis programmes on the management of tuberculosis in children. Since 2014, several recommendations pertaining to the management of TB in children and adolescents have been published in guidelines issued by WHO\u2019s Global Tuberculosis Programme."
+    },
+    {
+        "id": "doc_16",
+        "document": "Since the publication of the previous guidelines, critical gaps have been identified in diagnostic approaches for TB in children, the optimal duration of treatment for children with non-severe, drug- susceptible TB, treatment regimens for drug-resistant TB and TB meningitis, as well as optimal models of care for the delivery of child and adolescent TB services. In light of new evidence on these topics available to WHO\u2019s Global Tuberculosis Programme in 2021, and aligned with requests from Member"
+    },
+    {
+        "id": "doc_17",
+        "document": "States, WHO convened a Guideline Development Group (GDG) to examine the evidence in order to"
+    },
+    {
+        "id": "doc_18",
+        "document": "1 Children (aged 0-9 years) and young adolescents (aged 10-14 years) are referred to as children in this section based on historical surveillance definitions. However, in 2020, WHO\u2019s Global Tuberculosis Programme asked countries to report data on national notifications for more disaggregated age groups (0\u20134, 5\u20139, 10\u201314 and 15\u201319 years, compared with the previous groupings of 0\u20134 and 5\u201314 years."
+    },
+    {
+        "id": "doc_19",
+        "document": "2 Global Tuberculosis Report 2020. 2020. Geneva, Switzerland: World Health Organization. Available at: https://www.who.int/tb/publications/global_report/en/\n\n3 Dodd PJ, Sismanidis C, Seddon JA. Global burden of drug-resistant tuberculosis in children: a mathematical modelling study. The Lancet Infectious Diseases. 2016;16(10):1193-201 (http://dx.doi.org/10.1016/S1473-3099(16)30132-3.\n\nAW, Yuen CM, Parr JB, Keshavjee S,\n\nmultidrug-resistant\n\nHE,"
+    },
+    {
+        "id": "doc_20",
+        "document": "CM et\n\ndisease in children: systematic review and global estimates. The Lancet. 2014;383(9928):1572-9.\n\n5 Political declaration of the UN General-Assembly High-Level Meeting on the Fight Against Tuberculosis.\n\nhttps://www.who.int/publications/m/item/political-declaration-of-the-un-general-assembly-high-level-meeting-on-the-fight- against-tuberculosis\n\n1"
+    },
+    {
+        "id": "doc_21",
+        "document": "update the 2014 Guidance for national tuberculosis programmes on the management of tuberculosis in children. The GDG met in virtual sessions from 31 May to 17 June 2021 and proposed several new recommendations related to the management of TB in children and adolescents.6"
+    },
+    {
+        "id": "doc_22",
+        "document": "Following on from the GDG meeting, the preparation of consolidated WHO guidelines on the management of TB in children and adolescents, including the new recommendations as well as existing recommendations and a related operational handbook are underway. Both documents are expected to be released by the end of the year and will become available on the WHO Global Tuberculosis Programme\u2019s knowledge sharing platform in Module 5: Co-morbidities, vulnerable populations and people-centred care:"
+    },
+    {
+        "id": "doc_23",
+        "document": "Management of tuberculosis in children and adolescents."
+    },
+    {
+        "id": "doc_24",
+        "document": "This Rapid Communication is being issued to help national TB programmes and other stakeholders prepare for the changes that will be introduced in the new consolidated WHO guidelines on the management of TB in children and adolescents. Full implementation of the recommendations will only be possible after the new guidance is published by WHO, as the guidelines and operational handbook will address a range of implementation considerations.\n\nKey findings"
+    },
+    {
+        "id": "doc_25",
+        "document": "Diagnostic approaches in children aged below 10 years\n\nIntegrated treatment decision algorithms"
+    },
+    {
+        "id": "doc_26",
+        "document": "Various algorithms and scoring systems for the diagnosis of TB in children are currently in use, but these have not been systematically evaluated. To overcome the large case detection gap, especially in children under 10 years of age, evidence-based, pragmatic treatment decision algorithms are needed, ideally for different settings with varying access to diagnostic tests and chest radiography, as well as for children with co-morbidities, such as HIV infection. A review of individual patient data"
+    },
+    {
+        "id": "doc_27",
+        "document": "(IPD) from diagnostic evaluation studies (comprising 14 cohorts from 13 countries, with 4811 participants) was conducted to assess the sensitivity and specificity of existing treatment decision algorithms designed to detect pulmonary TB, which was defined according to a pre-specified clinical case definition.7 Each of these algorithms was compared to an algorithm considered to align closest to the current standard of care for diagnosing TB in children.8 The sensitivity of the algorithms ranged"
+    },
+    {
+        "id": "doc_28",
+        "document": "from 16% (95% CI: 9-27%) to 95% (95% CI: 88-98%) and specificity ranged from 9% (95% CI: 3-24%) to 89% (95% CI: 80-95%). Algorithms with a high sensitivity had a low specificity and vice versa. The standard of care algorithm had a sensitivity of 65% (95% CI: 52-76%) and a specificity of 64% (95% CI: 44-80%)."
+    },
+    {
+        "id": "doc_29",
+        "document": "The use of Xpert Ultra in gastric aspirate and stool samples\n\nThe Xpert MTB/RIF Ultra cartridge (Cepheid, Sunnyvale, USA), hereafter referred to as Xpert Ultra, was developed as the next-generation assay to overcome the suboptimal sensitivity in smear-negative TB patients when using the Xpert MTB/RIF assay. Existing WHO recommendations support the use of the"
+    },
+    {
+        "id": "doc_30",
+        "document": "6The focus population for this guideline is children and adolescents, defined as: A child is a person under 10 years of age (0-9 years); An adolescent is a person 10-19 years of age (inclusive).\n\n7 Graham SM, Cuevas LE, Jean-Philippe P, et al. Clinical Case Definitions for Classification of Intrathoracic Tuberculosis in Children: An Update. Clin Infect Dis. 2015 Oct 15;61Suppl 3(Suppl 3):S179-87. doi: 10.1093/cid/civ581"
+    },
+    {
+        "id": "doc_31",
+        "document": "8 The International Union Against Tuberculosis and Lung Disease. The Union\u2019s desk guide for diagnosis and management of TB in children. Third edition. 2016. Paris, France: The International Union Against Tuberculosis and Lung Disease.\n\n2"
+    },
+    {
+        "id": "doc_32",
+        "document": "Xpert Ultra assay in sputum and naso-pharyngeal aspirate samples in children for the diagnosis of TB and rifampicin resistance, in addition to the use of Xpert MTB/RIF cartridge (Cepheid, Sunnyvale, USA) in sputum, gastric aspirate, naso-pharyngeal aspirate and stool.9 The diagnostic accuracy of Xpert Ultra in gastric aspirate and stool samples for the diagnosis of pulmonary TB and rifampicin resistance against a microbiological reference standard (solid or liquid culture) was assessed in a"
+    },
+    {
+        "id": "doc_33",
+        "document": "systematic review and meta-analysis. The review included six studies involving 659 participants for gastric aspirate samples and six studies involving 1278 participants for stool samples. Studies were from nine countries (including four high TB and five high TB-HIV burden countries). The sensitivity of Xpert Ultra for detection of Mycobacterium tuberculosis was 64% (95% CI: 48 to 77%) in gastric aspirate samples and 53% (95% CI: 35 to 70%) in stool samples. The specificity was 95% in gastric"
+    },
+    {
+        "id": "doc_34",
+        "document": "aspirate samples (95% CI: 84 to 99%) and 98% in stool (CI: 93 to 99%). The benefit of detecting rifampicin resistance using Xpert Ultra was extrapolated from adult data."
+    },
+    {
+        "id": "doc_35",
+        "document": "Treatment shortening in children and adolescents with non-severe tuberculosis"
+    },
+    {
+        "id": "doc_36",
+        "document": "Evidence from the SHINE trial (Shorter Treatment for Minimal Tuberculosis in Children)10 was reviewed by the GDG. The SHINE trial was an open-label treatment-shortening trial in children with non-severe, symptomatic, presumed drug-susceptible, smear-negative TB, conducted in Uganda, Zambia, South Africa and India. Children aged below 16 years were randomised to 16- versus 24-weeks of standard first-line anti-tuberculosis treatment, using WHO pre-qualified paediatric fixed-dose combination"
+    },
+    {
+        "id": "doc_37",
+        "document": "formulations composed of TB medicines in ratios that are aligned with WHO-recommended dosing for children. The primary efficacy outcomes reviewed by the GDG were death by 72 weeks, treatment failure and loss-to-follow-up. The primary safety outcome was grade \u22653 adverse events observed during treatment. The 4-month treatment regimen was non-inferior to the 6-month regimen for children treated for non-severe, smear-negative TB, presumed to be drug susceptible. Non-inferiority was consistent across"
+    },
+    {
+        "id": "doc_38",
+        "document": "all key analyses (including age groups, HIV status, type of TB and adherence)."
+    },
+    {
+        "id": "doc_39",
+        "document": "The use of bedaquiline and delamanid for the treatment of rifampicin-resistant and multi-drug resistant TB in children\n\nThe use of bedaquiline in children aged below six years"
+    },
+    {
+        "id": "doc_40",
+        "document": "Bedaquiline is a core component of both shorter all-oral regimens as well as longer regimens recommended by WHO for the treatment of multidrug- or rifampicin-resistant tuberculosis (MDR/RR- TB) for children aged 6 years and above.11 The recommendations that apply to children are conditional and based on extrapolation of efficacy data in adults, in combination with pharmacokinetic (PK) and safety data from phase II trials for children aged 6-17 years."
+    },
+    {
+        "id": "doc_41",
+        "document": "9 WHO consolidated guidelines on tuberculosis. Module 3: diagnosis \u2013 rapid diagnostics for tuberculosis detection. 2021 update. Geneva, Switzerland: World Health Organization. Available at:\n\nhttps://apps.who.int/iris/rest/bitstreams/1354562/retrieve"
+    },
+    {
+        "id": "doc_42",
+        "document": "10 Chabala C, Turkova A, Thomason MJ, et al. Shorter treatment for minimal tuberculosis (TB) in children (SHINE): a study protocol for a randomised controlled trial. Trials. 2018 Apr 19;19(1):237. doi: 10.1186/s13063-018-2608-5. 11 WHO consolidated guidelines on tuberculosis. Module 4: treatment - drug-resistant tuberculosis treatment. 2020. Geneva: World Health Organization. Available at: https://apps.who.int/iris/rest/bitstreams/1280998/retrieve\n\n3"
+    },
+    {
+        "id": "doc_43",
+        "document": "Data from two phase II trials (TMC207-C21112 and IMPAACT P110813) were reviewed by the GDG. Data from TMC207-C211 corresponded to children aged 5 to 18 years and IMPAACT P1108 included children aged 0-6 years; therefore, the review of PK and safety data focused mainly on data from IMPAACT P1108. Although the sample size was small (N= 12), the GDG concluded that in children 0-6 years of age, there were no cardiac safety signals distinct from those reported in adults. Population PK models from"
+    },
+    {
+        "id": "doc_44",
+        "document": "both studies suggest that drug exposures observed in adults can be reached in most children receiving bedaquiline, although some dose modification may be necessary depending on the age and weight of the child."
+    },
+    {
+        "id": "doc_45",
+        "document": "In addition, data from a paediatric drug resistant (DR)-TB IPD were analysed descriptively (24,231 records from all six WHO regions, the majority from India and South Africa). Just under twenty thousand of these records were used for a matched analysis of treatment outcomes in children being treated for DR-TB. The analysis included 40 children aged below 6 years and 68 children aged 6-12 years who received bedaquiline. In the matched analysis, bedaquiline was significantly associated with"
+    },
+    {
+        "id": "doc_46",
+        "document": "shorter treatment duration and lower odds of injectable TB drug use. Although children aged less than six years receiving a bedaquiline based regimen had a lower proportion of successful treatment outcomes (75%) than those not receiving bedaquiline (84.1%), residual confounding (including confounding by indication) was thought to be likely."
+    },
+    {
+        "id": "doc_47",
+        "document": "The use of delamanid in children aged below three years\n\nSince 2018, WHO has conditionally recommended the use of delamanid for the treatment of MDR/RR- TB patients aged 3 years or more on longer regimens, based on extrapolation of efficacy data in adults, and trial data on PK and safety in children."
+    },
+    {
+        "id": "doc_48",
+        "document": "Data were reviewed by the GDG from a phase I, open-label, age de-escalation trial designed to assess the PK, safety, and tolerability of delamanid administered twice daily for 10 days in children with MDR/RR-TB on treatment with an optimized background regimen (protocol 242-12-232) and from the corresponding open-label extension study (protocol 242-12-233).14 Data from cohorts 1 (age 12-17 years), 2 (age 6-11 years), 3 (age 3-5 years) and 4 (age 0-2 years) for both protocols were reviewed."
+    },
+    {
+        "id": "doc_49",
+        "document": "Exposures in the 0-2 year age group were lower than those of patients aged 3 years and older, necessitating a modelling/simulation approach to dosing. No cardiac safety signals distinct from those reported in adults were observed in children 0-2 years of age. However, these findings were based on the fact that children received lower drug exposures comparable to adults. Pharmacodynamic simulations suggested that clinically meaningful changes in QT (i.e., prolongation) would be unlikely in"
+    },
+    {
+        "id": "doc_50",
+        "document": "children under 3 years of age, even if higher doses were used to reach drug exposures comparable to"
+    },
+    {
+        "id": "doc_51",
+        "document": "12 A Phase II, Open-label, Multicenter, Single-arm Study to Evaluate the Pharmacokinetics, Safety, Tolerability and Anti- mycobacterial Activity of TMC207 in Combination With a Background Regimen of Multidrug Resistant Tuberculosis (MDR-TB) Medications for the Treatment of Children and Adolescents 0 Months to <18 Years of Age Who Have Confirmed or Probable Pulmonary MDR-TB. Available at: https://clinicaltrials.gov/ct2/show/NCT02354014"
+    },
+    {
+        "id": "doc_52",
+        "document": "13 Phase I/II, Open-Label, Single Arm Study to Evaluate the Pharmacokinetics, Safety and Tolerability, of Bedaquiline in Combination with optimized Individualized Multidrug-Resistant Tuberculosis (MDR-TB) on in HIV-Infected and HIV-Uninfected Infants, Children and Adolescents with MDR-TB Disease. Available at: https://www.impaactnetwork.org/studies/p1108 14 A Phase I, Open-label, Multiple-dose, and Age De-escalation Trial to Assess the Pharmacokinetics, Safety and Tolerability of Delamanid (OPC"
+    },
+    {
+        "id": "doc_53",
+        "document": "67683) in Pediatric Multidrug-resistant Tuberculosis Patients on Therapy With an Optimized Background"
+    },
+    {
+        "id": "doc_54",
+        "document": "Regimen of Anti-tuberculosis Drugs. Available at: https://clinicaltrials.gov/ct2/show/NCT01856634\n\nA Phase II, Open-label, Multiple-dose Trial to Assess the Safety, Tolerability, Pharmacokinetics, and Efficacy of Delamanid (OPC- 67683) in Pediatric Multidrug-resistant Tuberculosis Patients on Therapy With an Optimized Background Regimen of Anti- tuberculosis Drugs Over a 6-Month Treatment Period. Available at: https://clinicaltrials.gov/ct2/show/NCT01859923\n\n4"
+    },
+    {
+        "id": "doc_55",
+        "document": "those achieved in adults. The paediatric DR-TB IPD included only 7 children aged below 3 years treated with delamanid, 14 children aged 3-6 years, and 69 children aged 6-12 years. All 7 children aged below 3 years were successfully treated. The number of patients was insufficient for a matched analysis.\n\nTreatment of TB meningitis in children and adolescents"
+    },
+    {
+        "id": "doc_56",
+        "document": "TB meningitis (TBM) is the most serious and the second most common form of extrapulmonary TB in children and adolescents. Without timely diagnosis and treatment, TBM is fatal and treatment outcomes are often poor even when treatment is provided.15 For children aged 0 to 10 years, WHO currently recommends a treatment regimen of twelve months, consisting of isoniazid, rifampicin, pyrazinamide, and ethambutol given daily for the first two months, followed by isoniazid and rifampicin given daily for"
+    },
+    {
+        "id": "doc_57",
+        "document": "ten additional months (2HRZE/10HR). The recommendation on the use of the 12-month regimen was based on a literature review conducted in 2009, largely based on non-randomized, non-comparative studies, which were not entered into GRADE (Grading of Recommendations, Assessment Development and Evaluation), given the lack of comparative data.16"
+    },
+    {
+        "id": "doc_58",
+        "document": "A systematic review and meta-analysis was conducted to compare the effectiveness of a shorter, intensive regimen (using daily isoniazid, rifampicin, pyrazinamide, and ethionamide throughout for six months - 6HRZEto) versus the WHO-recommended twelve-month regimen. Dosing of isoniazid and rifampicin in the intervention regimen was slightly higher compared to the comparator regimen.17 The shorter intensive regimen (3 studies, involving 724 participants) had a death rate of 8.0% (95% CI: 2- 13%)"
+    },
+    {
+        "id": "doc_59",
+        "document": "versus 24.0% (95% CI: 18-32%) for the 12-month regimen (3 studies, 282 participants). Treatment success for the shorter intensive regimen was 83% (95% CI: 74-99%) versus 75% for the 12-month regimen (95% CI: 69-81%). Neurological sequelae occurred in 66% of survivors (95% CI: 55-75%) who received the shorter intensive regimen versus 36% (95% CI: 30-43%) in the 12-month regimen. Survival without neurological sequelae was 28% (95% CI: 20-41%) versus 48% (95% CI: 42-54%) for patients who received"
+    },
+    {
+        "id": "doc_60",
+        "document": "the shorter intensive regimen and the 12-month regimen, respectively. The GDG members noted the small number of studies and the potential for residual confounding."
+    },
+    {
+        "id": "doc_61",
+        "document": "Models of care for case detection and provision of TB preventive treatment in children and adolescents"
+    },
+    {
+        "id": "doc_62",
+        "document": "Capacity for paediatric TB care is often highly centralized at the secondary or tertiary levels of the health care system, and children may present seriously ill at these services, after delays in accessing other services. Healthcare workers at the primary health care (PHC) level may have limited capacity and confidence in managing paediatric TB, although this is where most children with TB or at risk of TB initially seek care. In addition, TB screening is often not part of clinical algorithms"
+    },
+    {
+        "id": "doc_63",
+        "document": "for child health. There"
+    },
+    {
+        "id": "doc_64",
+        "document": "15 Chiang SS, Khan FA, Milstein MB, et al. Treatment outcomes of childhood tuberculous meningitis: a systematic review and meta-analysis. Lancet Infect Dis. 2014 Oct;14(10):947-57. doi: 10.1016/S1473-3099(14)70852-7. Epub 2014 Aug 6. 16 WHO Rapid advice: Treatment of tuberculosis in children. Annex 1 - Evidence summary tables. 2010. Geneva, Switzerland: World Health Organization."
+    },
+    {
+        "id": "doc_65",
+        "document": "17 Daily dosages used in the 6 month intensive regimen were: isoniazid 20 mg/kg (maximum 400 mg), rifampicin 20 mg/kg (maximum 600 mg), pyrazinamide 40 mg/kg (maximum 2000 mg), ethionamide 20mg/kg (maximum 750mg). Daily dosages used in the 12 month standard regimen are: isoniazid 7-15 mg/kg, rifampicin 10-20 mg/kg, pyrazinamide 30-40 mg/kg, ethambutol 15-25 mg/kg.\n\n5"
+    },
+    {
+        "id": "doc_66",
+        "document": "are many missed opportunities for contact tracing, TB prevention, TB detection and TB care and management, often because of weak integration of child and adolescent TB services with other programmes and services. Decentralization and family-centred, integrated care are highlighted as one of ten key actions in the 2018 Roadmap Towards Ending TB in Children and Adolescents.18"
+    },
+    {
+        "id": "doc_67",
+        "document": "A systematic review was conducted to assess evidence on the impact of decentralized and family- centred, integrated approaches on case detection and the provision of TB preventive treatment (TPT). The evidence showed that combined health facility and community approaches (including improved diagnostic capacity in primary care and community outreach or screening services) increased the number of children and adolescents diagnosed with TB and decentralized services can increase the levels of TPT"
+    },
+    {
+        "id": "doc_68",
+        "document": "initiation. There was positive but limited evidence showing that different types of service integration increase TB case notifications in children and adolescents. Socio-economic support for families affected by TB was shown to improve TPT coverage and completion among children and adolescents as well."
+    },
+    {
+        "id": "doc_69",
+        "document": "Key updates\n\nBased on the evidence reviewed and considering the discussions, deliberations and decisions of the GDG, the key updates for the upcoming TB guidelines will include the following points:"
+    },
+    {
+        "id": "doc_70",
+        "document": "\u2022 In children aged below 10 years with presumptive pulmonary TB, treatment decision algorithms may be used to diagnose pulmonary TB. Bacteriological confirmation needs to be sought whenever possible, using available and recommended diagnostic tests and appropriate paediatric specimens. The choice of the treatment decision algorithm will depend on the specific population and available diagnostic tests. Practical guidance on treatment decision algorithms for different settings and populations will"
+    },
+    {
+        "id": "doc_71",
+        "document": "be included in the operational handbook which will be published alongside the guidelines."
+    },
+    {
+        "id": "doc_72",
+        "document": "\u2022 In children aged below 10 years with signs and symptoms of pulmonary TB, the latest evidence reviewed supports the use of Xpert MTB/ RIF Ultra in gastric aspirate or stool specimens as the initial diagnostic test for TB and the detection of rifampicin resistance, rather than smear microscopy/culture and phenotypic drug susceptibility testing (DST). This is in addition to sputum or naso-pharyngeal aspirate specimens, which are already recommended by WHO for Xpert Ultra testing, in the same"
+    },
+    {
+        "id": "doc_73",
+        "document": "population.19"
+    },
+    {
+        "id": "doc_74",
+        "document": "In children and adolescents under 16 years of age with non-severe, presumed drug-susceptible TB, a 4-month regimen (2HRZ(E)/2HR) should be used rather than the standard 6-month regimen (2HRZ(E)/4HR). Important implementation considerations were noted to determine eligibility for the shorter treatment regimen and will be described in the consolidated guidelines and in the operational handbook.\n\n\u2022 In children with MDR/ RR-TB of all ages:"
+    },
+    {
+        "id": "doc_75",
+        "document": "18 Roadmap towards ending TB in children and adolescents: second edition. 2018. Geneva, Switzerland: World Health Organization. Available at: https://www.who.int/iris/bitstream/handle/10665/274374/9789241514668-eng.pdf 19 WHO consolidated guidelines on tuberculosis. Module 3: diagnosis \u2013 rapid diagnostics for tuberculosis detection. . 2021. Geneva, Switzerland: World Health Organization. Available at: https://www.who.int/publications/i/item/9789240029415\n\n6"
+    },
+    {
+        "id": "doc_76",
+        "document": "o Bedaquiline may be used as part of the shorter, all oral bedaquiline-containing regimen (conditionally recommended by WHO in 202020) or as part of longer treatment regimens. o Delamanid may be used as part of longer treatment regimens.\n\no These recommendations make it possible to design all-oral regimens for children of all ages."
+    },
+    {
+        "id": "doc_77",
+        "document": "In children and adolescents with microbiologically confirmed or clinically diagnosed TB meningitis, presumed to be drug susceptible, a 6-month intensive regimen composed of 6HRZEto may be used as an alternative option to the WHO recommended 12-month regimen composed of 2HRZE/10HR. The existing strong recommendation for the 12-month regimen composed of 2HRZE/10HR remains in place."
+    },
+    {
+        "id": "doc_78",
+        "document": "\u2022 In high TB burden settings, decentralized and family-centred, integrated services may be implemented to improve TB case detection and the uptake of TB preventive treatment. In this context, decentralized services do not replace centralized or specialized child and adolescent TB services, rather, they complement them.\n\nNext steps"
+    },
+    {
+        "id": "doc_79",
+        "document": "\u2022 The updated recommendations will be released as the WHO consolidated guidelines on tuberculosis: Module 5: Co-morbidities, vulnerable populations and people-centred care: Management of tuberculosis in children and adolescents by the end of 2021. These guidelines will consolidate the updated recommendations and all relevant WHO guidance on the management of TB in children and adolescents and will include detailed results of the evidence that was reviewed, as well as GDG processes. The summary"
+    },
+    {
+        "id": "doc_80",
+        "document": "of findings and evidence to decision tables will be produced in conformity with the GRADE method and will be made available on the WHO Global Tuberculosis Programme website. The guidelines will be translated into French, Spanish and Russian."
+    },
+    {
+        "id": "doc_81",
+        "document": "\u2022 The guidelines will be accompanied by an operational handbook. This document will provide operational guidance on the new recommendations, including treatment decision algorithms for use in various settings and populations, eligibility criteria for shorter treatment regimens for children with non-severe, drug-susceptible TB, practical advice on building treatment regimens for children with MDR/RR- TB who are not eligible for shorter all-oral bedaquiline-containing regimens, and examples of"
+    },
+    {
+        "id": "doc_82",
+        "document": "models of care from various settings, among other topics. The content and structure of the operational handbook, as well as the preferred methods for dissemination of both the guidelines and the operational handbook will be informed by feedback collected by WHO\u2019s Global Tuberculosis Programme from National TB Programmes, technical partners and other key stakeholders through an online survey conducted between April and June 2021."
+    },
+    {
+        "id": "doc_83",
+        "document": "\u2022 WHO\u2019s Global Tuberculosis Programme will also undertake the following additional consultations to further inform the guidelines and operational handbook:\n\no on dosing of bedaquiline and delamanid in younger age groups (0-6 and 0-3 years, respectively, taking into account the availability of child-friendly formulations), as well as the shorter intensive regimen for TB meningitis"
+    },
+    {
+        "id": "doc_84",
+        "document": "20 WHO consolidated guidelines on tuberculosis. Module 4: treatment - drug-resistant tuberculosis treatment. 2020. Geneva, Switzerland: World Health Organization. Available at: https://apps.who.int/iris/rest/bitstreams/1280998/retrieve\n\n7\n\no the classification of intrathoracic TB in children (currently intrathoracic lymphadenopathy is classified as extra-pulmonary TB)."
+    },
+    {
+        "id": "doc_85",
+        "document": "\u2022 The release of the new guidelines and operational handbook will be followed by a series of WHO webinars for different regions to communicate the recommendations and implementation considerations. The new recommendations on the management of TB in children and adolescents will be included in the online knowledge sharing platform that WHO\u2019s Global Tuberculosis Programme has launched in June 2021, which provides access to all WHO guidelines, operational handbooks and eLearning tools.21 The"
+    },
+    {
+        "id": "doc_86",
+        "document": "webinars and the online knowledge sharing platform will support countries to update their national guidelines, train staff, inform programme budgets and facilitate rapid transition to scale up interventions to improve the prevention, diagnosis and management of TB in children and adolescents."
+    },
+    {
+        "id": "doc_87",
+        "document": "Acknowledgements\n\nWHO gratefully acknowledges the work of the GDG members, the evidence reviewers, national TB programmes, WHO staff, technical and funding partners, community and civil society representatives, patients and their care-givers, as well as all others who contributed to the data to inform this guideline update.\n\n21 WHO Global Tuberculosis Programme\u2019s knowledge sharing platform is accessible at: https://tbksp.org/en/home\n\n8\n\n\u00a2 /) = Y v 74 N \u2018\\. > V N"
+    },
+    {
+        "id": "doc_88",
+        "document": "World Health Organization\n\nWorld Health Organization Global Tuberculosis Programme Avenue Appia 20, CH-1211 Geneva-27, Switzerland\n\n           \n\n9789240033450 I\n\n\u00a320Z S3UIIBPIND [ed1Ul]) epuebn\n\nsaseasiq A1o3eJ1dsay :\u00a7 YyILdAVHD\n\n356"
+    },
+    {
+        "id": "doc_89",
+        "document": "TREATMENT LOC Note Cough mixtures, sedatives, mucolytics, and antihistamines are USELESS in pertussis and should NOT be given"
+    },
+    {
+        "id": "doc_90",
+        "document": "Prevention\n\n~ Educate parents on the importance of following the routine childhood immunisation schedule:\n\n~ Ensure good nutrition\n\n~ Avoid overcrowding\n\n~ Booster doses of vaccine in exposed infants"
+    },
+    {
+        "id": "doc_91",
+        "document": "5.2.9 Pneumonia ICD10 CODE: J13-18\n\nAcute infection and inflammation of the lungs alveoli. There are two major types:\n\n~ Bronchopneumonia: involves both the lung parenchyma and the bronchi. Common in children and the elderly\n\n~ Lobar pneumonia: involves one or more lobes of the lung. Common in young people"
+    },
+    {
+        "id": "doc_92",
+        "document": "Causes\n\nCausative agents can be viral, bacterial or parasitic. Pathogens vary according to age, patient\u2019s condition and whether infection was ac- quired in the community or hospital (Gram negative are more common in hospital).\n\n~ Neonates: group B streptococcus, Klebsiella, E.coli, Chla- mydia and S. aureus\n\n~ Children <5 years: Pneumococcus, Haemophilus influen- zae, less frequently: S. aureus, M. catarrhalis, M. Pneumo- niae, viruses (RSV, influenza, measles)"
+    },
+    {
+        "id": "doc_93",
+        "document": "~ Adults and children >5 years: most commonly S.pneumo-\n\nniae, followed by atypical bacteria, e.g. Mycloplasma pneu- moniae, viruses\n\n~ Immunosuppressed: Pneumocystis (in HIV infected)\n\nPredisposing factors\n\n~ Malnutrition\n\n~ Old age\n\n000\n\n~ Immunosuppression (HIV, cancer, alcohol dependence)\n\n~ Measles, pertussis\n\n~ Pre-existing lung or heart diseases, diabetes\n\n\u00a320Z S3UIIBPIND [ed1Ul]) epuebn\n\nInvestigations\n\nIf facilities are available\n\nDo a chest X-ray and look for complications, e.g."
+    },
+    {
+        "id": "doc_94",
+        "document": "- Pneumothorax, pyothorax\n\n- Pneumonitis suggestive of pneumocystis jiroveci pneumonia (PCP)\n\n- Pneumatocoeles (cavities filled with air) suggestive of staphylococcal pneumonia\n\nSputum: For Gram stain, Ziehl-Neelsen (ZN) stain, culture for AFB\n\nBlood: Complete blood count"
+    },
+    {
+        "id": "doc_95",
+        "document": "5.2.9.1 Pneumonia in an Infant (up to 2 months)\n\nIn infants, not all respiratory distress is due to infection. But as pneumonia may be rapidly fatal in this age group,\n\nsuspected cases should be treated promptly and referred for parenteral treatment with antimicrobials. Consider all children < 2 months with pneumonia as SEVERE disease.\n\nClinical features\n\n~ Rapid breathing ( 60 breaths/minute)\n\nsaseasiq A1o3eJ1dsay :\u00a7 YyILdAVHD\n\n357\n\n\u00a320Z S3UIIBPIND [ed1Ul]) epuebn"
+    },
+    {
+        "id": "doc_96",
+        "document": "~ Severe chest in drawing, grunting respiration\n\n[OJOJONOJONOXO]\n\n~ Inability to breastfeed\n\n~ Convulsions\n\n~ Drowsiness\n\n~ Stridor in a calm child, wheezing\n\n~ Fever may or may not be present\n\n~ Cyanosis and apnoeic attacks (SpO2 less than 90%)\n\nManagement\n\nInfants with suspected pneumonia should be referred to hospital after pre-referral dose of antibiotics.\n\nWALAVHD\n\nsasess|g A103e1dsay 1\u00a7\n\nManagement"
+    },
+    {
+        "id": "doc_97",
+        "document": "TREATMENT LOC Q Admit H Q Keep baby warm Q Prevent hypoglycaemia by breastfeeding/giving expressed breast milk/NGT f child is lethargic, do not give oral feeds. Use IV fluids with care (see section 1.1.4)"
+    },
+    {
+        "id": "doc_98",
+        "document": "Give oxygen to keep SpO2 >94% f Ampicillin 50 mg/ g IV every 6 hours f Plus gentamicin 7.5 mg/kg IV once daily Q Neonates < 7 days old: 5 mg/kg IV once daily Q n premature babies, the doses may need to be reduced (specialist only) In severely ill infants O Ceftriaxone 100 mg/kg IV once daily Alternative (only use if above not available)"
+    },
+    {
+        "id": "doc_99",
+        "document": "O Chloramphenicol 25 mg/kg IV every 6 hours (contrain- dicated in premature babies and neonates < 7 days old)"
+    },
+    {
+        "id": "doc_100",
+        "document": "dicated in premature babies and neonates < 7 days old)\n\n358\n\nManagement"
+    },
+    {
+        "id": "doc_101",
+        "document": "TREATMENT Continue treatment for at least 5 days, and for 3 days after the child is well If meningitis is suspected, continue for 21 days If septicaemia is suspected, continue for 10 days LOC H"
+    },
+    {
+        "id": "doc_102",
+        "document": "5.2.9.2 Pneumonia in a Child of 2 months-5 years\n\nClinical features\n\n~ Fever - may be high, low grade or absent (in severe illness)\n\nPneumonia\n\n~ Cough\n\n~ Fast breathing (2-12 months: 50 bpm, 1-5 years: 40 bpm)\n\n~ Mild chest wall in-drawing"
+    },
+    {
+        "id": "doc_103",
+        "document": "Severe pneumonia\n\n~ As above plus at least one of the following\n\n~ Central cyanosis (blue lips, oral mucosa, finger nails or ox- ygen saturation < 90% using a pulse oximeter)\n\n~ Inability to feed, vomiting everything\n\n~ Convulsions, lethargy, decreased level of consciousness\n\n~ Severe respiratory distress (severe chest indrawing, grunt- ing, nasal flaring)"
+    },
+    {
+        "id": "doc_104",
+        "document": "~ Extrapulmonary features, e.g. confusion or disorientation, may predominate and may be the only signs of pneumonia in malnourished or immunosuppressed children\n\n\u00a320Z S3UIIBPIND [ed1Ul]) epuebn\n\nsaseasiq A1o3eJ1dsay :\u00a7 YyILdAVHD\n\n359\n\n\u00a320Z S3UIIBPIND [ed1Ul]) epuebn\n\nsaseasiq A103e1d50Y 1\u00a7 YILAVHD\n\nManagement of pneumonia"
+    },
+    {
+        "id": "doc_105",
+        "document": "TREATMENT LOC Non-severe pneumonia HC2 O Give oral amoxicillin dispersible tabs (DT) 40 mg/kg every 12 hours for 5 days O 5 days 1-3 years 500 mg (2 tabs) every 12 hours for 5 days 3-5 years 750 mg (3 tabs) every 12 hours for 5 days HC3 O wheezing present Salbutamol inhaler 1-2 puffs every 4-6 hours until wheezing stops"
+    },
+    {
+        "id": "doc_106",
+        "document": "O Reassess child for progress after 3 days Severe pneumonia HC4 Q Refer to hospital after 1st dose of antibiotic Q Admit Q Give Oxygen if SpO2 < 90% with nasal prongs and monitor through pulse oximetry HC4 Give ampicillin 50 mg/kg IV every 6 hours or"
+    },
+    {
+        "id": "doc_107",
+        "document": "benzyl penicillin 50,000 1U/kg IM or IV Plus gentamicin 7.5 mg/kg IM or IV once daily Continue treatment for at least 5 days, up to 10 days If not better after 48 hours, use second line f Ceftriax- one 80 mg/kg IM or IV once daily f If staphylococcus is suspected (empyema, pneumatocele at X ray) , give gentamicin 7.5 mg/ kg once daily plus cloxacillin 50 mg/kg IM or IV every 6 hours"
+    },
+    {
+        "id": "doc_108",
+        "document": "360"
+    },
+    {
+        "id": "doc_109",
+        "document": "TREATMENT LOC Once the patient improves Switch to oral amoxicillin 40 mg/kg every 12 hours for 5 days to complete a total of at least 5 days of antibiotics Alternative (if above not available/not working) Chloramphenicol 25 mg/kg IV every 6 hours Other treatments Give Paracetamol 10 mg/kg every 4-6 hours for fever"
+    },
+    {
+        "id": "doc_110",
+        "document": "If wheezing, give salbutamol 1-2 puffs every 4-6 hours Gentle suction of thick secretions from upper airway Daily maintenance fluids \u2014 careful to avoid overload especially in small and malnourished children (see section 1.1.4) If convulsions, give diazepam 0.5 mg/kg rectally or 0.2 mg/kg IV convulsions"
+    },
+    {
+        "id": "doc_111",
+        "document": "are continuous Give a long-acting anticonvulsant, e.g., phenobarbital 10-15 mg/kg IM as a loading dose. Depending on response, repeat this dose after 12 hours or switch to oral maintenance dose of 3-5 8-12 hours"
+    },
+    {
+        "id": "doc_112",
+        "document": "mg/kg every Monitor and record Respiratory rate (every 2 hours) Body temperature (every 6 hours) Oxygen saturation (every 12 hours) Improvement in appetite and playing Use of accessory muscles of respiration Ability to breastfeed, drink and eat -"
+    },
+    {
+        "id": "doc_113",
+        "document": "\u00a320Z S3UIIBPIND [ed1Ul]) epuebn\n\nsaseasiq A103e1d50Y 1\u00a7 YILAVHD\n\n361\n\n\u00a320Z S3UIIBPIND [ed1Ul]) epuebn\n\nWALAVHD\n\nsasess|g A103e1dsay 1\u00a7\n\n362\n\n5.2.9.3 Pneumonia in Children > 5 years and adults\n\nClinical features\n\nModerate\n\n~ Fever, chest pain, cough (with or without sputum), rapid breathing (> 30 bpm), no chest indrawing\n\nSevere\n\n~ As above plus\n\ng\n\n~ Chest indrawing\n\n~ Pulse >120/minute\n\n~ Temperature > 39.5 o C\n\n~ Low BP < 90/60 mmHg\n\n~ Oxygen saturation less than 90%"
+    },
+    {
+        "id": "doc_114",
+        "document": "Note\n\nExtrapulmonary features, e.g. confusion or disorientation, may predominate and may be the only signs of pneumonia in elderly or immunosuppressed patients\n\nManagement of pneumonia"
+    },
+    {
+        "id": "doc_115",
+        "document": "TREATMENT Moderate pneumonia (ambulatory patients) Amoxicillin 500 mg-1 g every 8 hours for 5 days Children: 40 mg/kg every 12 hours for 5 days. Preferably use dispersible tablets in younger children If penicillin allergy or poor response after 48 hours (possible atypical pneumonia), give: Doxycycline 100 mg every 12 hours for 7-10 days Child > 8 years only: 2 mg/kg per dose Or Erythromycin 500 mg every 6 hours for 5 days LOC"
+    },
+    {
+        "id": "doc_116",
+        "document": "TREATMENT LOC - 14 days in cases of atypical pneumonia HC3 Child: 10-15 mg/kg per dose O Give oxygen and monitor SpO2 saturation with pulse O Benzylpenicillin 2 MU IV or IM daily every 4-6 hours Child: 50,000-100,000 IU/kg per dose If better 48 hours:"
+    },
+    {
+        "id": "doc_117",
+        "document": "O Ceftriaxone 1 g IV or IM every 24 hours Child: 50 mg/kg per dose (max: 1 g) If S. Aureus is suspected O Cloxacillin 500 mg IV every 6 hours If other options are not available O Chloramphenicol 1 g IV every 6 hours for 7 days Child: 25 mg/kg per dose (max: 750 mg)"
+    },
+    {
+        "id": "doc_118",
+        "document": "5.2.9.4 Pneumonia by Specific Organisms\n\nManagement of pneumonia"
+    },
+    {
+        "id": "doc_119",
+        "document": "TREATMENT Stapylococcus pneumonia This form is especially common following a recent influenza infection. It can cause empyema and pneu- matocele. Adults and children >5 years: Cloxacillin 1-2 g IV or IM every 6 hours for 10-14 days Child >5 years: 50 mg/kg per dose (max: 2 g) Child 2 months-5 years LOC"
+    },
+    {
+        "id": "doc_120",
+        "document": "epuebn -\n\n\u00a320Z S3UIIBPIND [ed1Ul])\n\nsaseasiq A103e1d50Y 1\u00a7 YILAVHD\n\n363\n\n\u00a320Z S3UIIBPIND [ed1Ul]) epuebn\n\nsaseasiq A103e1d50Y 1\u00a7 YILAVHD\n\nManagement of pneumonia"
+    },
+    {
+        "id": "doc_121",
+        "document": "TREAjI'MENT TREATMENT LOC O Cloxacillin 25-50 mg/kg IV or IM every 6 hours ? mg/kg daily O Or ciprofloxacin 500 mg every 12 hours Child: chloramphenicol 25 mg/kg every 6 hours - Give a 5-day course - Amend therapy as guided by C&S results Pneumococcal pneumonia H"
+    },
+    {
+        "id": "doc_122",
+        "document": "O Benzylpenicillin 50,000 1U/kg IV or IM every 6 hours for 2-3 days then switch to oral Amoxicillin 500 mg-1 g every 8 hours for 5 days Children: 40 mg/kg every 12 hours for 5 days."
+    },
+    {
+        "id": "doc_123",
+        "document": "Preferably use dispersible tablets in younger children\n\n5.2.9.5 Pneumocystis jirovecii Pneumonia\n\nRefer to section 3.1.10.2\n\n364\n\nICD10 CODE: J85.0-1\n\n5.2.9.6 Lung Abscess\n\nLocalised inflammation and\n\nof"
+    },
+    {
+        "id": "doc_124",
+        "document": "to Localised inflammation and necrosis (destruction) of lung tissue leading pus formation. It is most commonly - . [e1ul] caused by aspiration of oral secretions by patients who have impaired SauljapIng consciousness. Cause \u00ae Infection of lungs with pus forming organisms: e.g. \u20ac20z"
+    },
+    {
+        "id": "doc_125",
+        "document": "\u00ae Klebsiella pneumoniae, Staphylococcus aureus Clinical features Onset is acute or gradual 0000 Malaise, loss of appetite, sweating with chills and fever Cough with purulent sputum, foul-smelling breath (halitosis) YyILdAVHD Chest pain indicates pleurisy :\u00a7 Complications A1o3eJ1dsay"
+    },
+    {
+        "id": "doc_126",
+        "document": "\u00ae Pus in the pleural cavity (empyema) \u00ae Coughing out blood (haemoptysis) saseasiq \u00ae Septic emboli to various parts of the body, e.g. brain (caus- ing brain abscess) \u00ae Bronchiectasis (pus in the bronchi) Differential diagnosis Bronchogenic carcinoma Bronchiectasis"
+    },
+    {
+        "id": "doc_127",
+        "document": "[OONONO! Primary empyema communicating with a bronchus TB of the lungs"
+    },
+    {
+        "id": "doc_128",
+        "document": "~ Liver abscess communicating into the lung\n\nepuebn -\n\n365\n\n\u00a320Z S3UIIBPIND [ed1Ul]) epuebn\n\nsaseasiq A103e1d50Y 1\u00a7 YILAVHD\n\nInvestigations\n\nChest X-ray\n\nEarly stages: Signs of consolidation\n\nLater stages: A cavity with a fluid level\n\nSputum: For microscopy and culture and sensitivity\n\nManagement of pneumonia"
+    },
+    {
+        "id": "doc_129",
+        "document": "TREATMENT LOC O Benzylpenicillin 1-2 MU IV or IM every 4-6 hours HC4 O Child: 50,000-100,000 IU/kg per dose (max: 2 MU) Q Plus metronidazole 500 mg IV every 8-12 hours Child: 12.5 mg/kg per dose Once improvement occurs, change to oral medication and continue for 4-8 weeks f Metronidazole 400 mg every 12 hours"
+    },
+    {
+        "id": "doc_130",
+        "document": "Child: 10 mg/kg per dose Plus Amoxicillin 500 mg-1 g 8 hourly Child: 25-50 mg/kg per dose for 4-6 weeks Postural drainage/physiotherapy Surgical drainage may be necessary"
+    },
+    {
+        "id": "doc_131",
+        "document": "Prevention\n\n~ Early detection and treatment of pneumonia\n\n5.3 TUBERCULOSIS (TB) ICD11 CODE: A15-A19"
+    },
+    {
+        "id": "doc_132",
+        "document": "5.3.1Definition, Clinical Features and Diagnosis of TB\n\nA chronic infection caused by Mycobacterium tuberculosis complex. It commonly affects lungs but can affect any organ (lymph nodes, bones, meninges, abdomen, kidney).\n\n366\n\nFor more information on the management of TB see:\n\nManual of the National TB/Leprosy Programme (NTLP) in Uganda 4th Edition, 2022\n\nNTLP desk guide\n\n00O\n\nLatent TB guidelines\n\nNational drug resistant TB guidelines\n\nCauses"
+    },
+    {
+        "id": "doc_133",
+        "document": "~ Mycobacterium tuberculosis complex (e.g. M. tuberculosis,\n\n~ M. bovis, M. avium, M. africanum and M. Microti)\n\n(ONONNO]\n\n~ M. tuberculosis is the commonest cause of tuberculosis\n\n~ Transmission by droplet inhalation (cough from a patient with open pulmonary TB); can also be through drinking unpasteurised milk, especially M.bovis\n\nClinical features\n\nGeneral symptoms\n\n~ Fevers especially in the evening,\n\n~ excessive night sweats\n\n~ Weight loss and loss of appetite"
+    },
+    {
+        "id": "doc_134",
+        "document": "Pulmonary TB\n\n~ Chronic cough of >2 weeks (however, in HIV settings, cough of any duration)\n\n~ Chest pain, purulent sputum occasionally blood-stained, shortness of breath\n\nExtrapulmonary TB\n\n~ Lymphnode TB: Localized enlargement of lymph nodes de- pending on the site affected (commonly neck)\n\n\u00a320Z S3UIIBPIND [ed1Ul]) epuebn\n\nsasess|g A103e1dsay 1\u00a7 WALAVHD\n\n367\n\n\u00a320Z S3UIIBPIND [ed1Ul]) epuebn"
+    },
+    {
+        "id": "doc_135",
+        "document": "WALAVHD\n\nsasess|g A103e1dsay 1\u00a7\n\n~ Pleural or pericardial effusion\n\n(ONONO}\n\n~ Abdominal TB: ascites and abdominal pain\n\n~ TB meningitis: subacute meningitis (headache, alteration of consciousness)\n\n~ Bone or joint TB: swelling and deformity"
+    },
+    {
+        "id": "doc_136",
+        "document": "Complications\n\n~ Massive haemoptysis - coughing up >250 mL blood per episode\n\n~ Spontaneous pneumothorax and pleural effusion\n\n000\n\n~ TB pericarditis, TB meningitis, TB peritonitis\n\n~ Bone TB: can be TB spine with gibbus, TB joints with deformity)\n\n~ Respiratory failure\n\nTB Case Definitions"
+    },
+    {
+        "id": "doc_137",
+        "document": "CASE DEFINITION DESCRIPTION Presumptive TB patient Any patient who presents with symptoms and signs suggestive of TB or found to have chest X-ray suggestive of active TB disease"
+    },
+    {
+        "id": "doc_138",
+        "document": "Bacteriologically confirmed TB patient Patient in whom biological specimen is positive by smear microscopy, culture or molecular WHO Recommended Diagnostic (mWRD) test like GeneXpert Truenat or TB LAMP. All such cases should be notified (regis- tered in the unit TB register)"
+    },
+    {
+        "id": "doc_139",
+        "document": "Clinically diagnosed TB patient Patient who does not fulfil the criteria for bacteriological confir- mation but has been diagnosed with active TB by a clinician on the basis of clinical signs and symptoms supported by relevant investigations"
+    },
+    {
+        "id": "doc_140",
+        "document": "368"
+    },
+    {
+        "id": "doc_141",
+        "document": "Classification of TB Disease CASE DEFINITION Site of the disease DESCRIPTION Pulmonary TB: bacteriologically confirmed or clinically diagnosed case, affecting lung parenchyma or tracheobronchial tree. Extrapulmonary TB: Any other case of TB. Isolated TB pleural effusion and mediastinal lymphadenopathy without lung tissue involvement is considered extrapulmonary TB"
+    },
+    {
+        "id": "doc_142",
+        "document": "If the patient has pulmonary and extrapulmonary involvement, he/ she will be classified as pulmonary B History of treatment New: no previous TB treatment (or treatment less < 1 month) Relapse: patient who completed a previous course of treatment, was declared cured or treatment completed, and is now diagnosed with a recurrent episode of TB"
+    },
+    {
+        "id": "doc_143",
+        "document": "Treatment after failure: those who have previously been treated for TB and whose treatment failed at the end of their most recent course of treatment Treatment after loss to follow-up: Patient has been previously treated for TB and were declared lost to follow-up at the end of their most recent course of treatment."
+    },
+    {
+        "id": "doc_144",
+        "document": "\u00a320Z S3UIIBPIND [ed1Ul]) epuebn\n\nsaseasiq A103e1d50Y 1\u00a7 YILAVHD\n\n369\n\n\u00a320Z S3UIIBPIND [ed1Ul]) epuebn\n\nsaseasiq A103e1d50Y 1\u00a7 YILAVHD"
+    },
+    {
+        "id": "doc_145",
+        "document": "CASE DEFINITION DESCRIPTION Treatment history unknown: Those who have previously been treated for TB but whose Outcome after their most recent course of treatment is unknown or undocu- mented Drug susceptibility status (based on drug susceptibility Tests) Drug Sensitive TB (DS-TB): These are sensitive to 1st line anti-TB drugs"
+    },
+    {
+        "id": "doc_146",
+        "document": "Drug resistant TB (DR-TB): Resis- tant to any anti-TB drug. Can be classified as follows. Rifampicin resistant: any case of rifampicin resistance (isolated or in combination with other resistance) (RR-TB) Monoresistant: resistant to only one first line anti-TB drug Poly drug resistant: resistant to more than one first line anti TB other than both rifampicin and isoniazid"
+    },
+    {
+        "id": "doc_147",
+        "document": "Multi drug resistant: resistant to ri- fampicin and isoniazid (MDR -TB) Extensive drug resistance (XDR- TB): resistant to rifampicin, isoniazid (MDR TB) and any fluoroquinolone and at least one of either bedaquiline or Linezolid ) HIV status Positive: patients who tested HIV-positive at time of diagnosis or already enrolled in HIV care"
+    },
+    {
+        "id": "doc_148",
+        "document": "370"
+    },
+    {
+        "id": "doc_149",
+        "document": "CASE DEFINITION DESCRIPTION HIV status Negative: patients who tested neg- ative at the moment of diagnosis Unknown: If testing is then performed at any moment during treatment, patient should be re classified"
+    },
+    {
+        "id": "doc_150",
+        "document": "Differential diagnosis\n\n~ Histoplasma pneumonia, trypanosomiasis, brucellosis\n\n\u00a9O\u00ae0 00060606\n\n~ Pneumonia\n\n~ COVID-19\n\n~ HIV/AIDS\n\n~ Malignancy\n\n~ COPD, asthma, bronchiectasis, emphysema etc.\n\n~ Post TB lung disease\n\n~ Fungal infection of the lungs e.g. Aspergillosis"
+    },
+    {
+        "id": "doc_151",
+        "document": "Screening and diagnosis of TB disease\n\nTB screening: is defined as the systematic identification of peo- ple at risk for TB disease, in a predetermined target group, by assessing using tests, examinations or other procedures that can be applied rapidly\n\nTB screening approaches:\n\n\u2022 Symptom screening or CXR\n\n\u2022 All individuals seeking health care should be screened for TB at each visit"
+    },
+    {
+        "id": "doc_152",
+        "document": "Investigations for TB\n\nObtain sputum sample or other relevant samples from presumptive TB patients for diagnosis\n\n\u2022 Xpert MTB/RIF is the recommended diagnostic test for TB diagnosis\n\n\u00a320Z S3UIIBPIND [ed1Ul]) epuebn\n\nsaseasiq A1o3eJ1dsay :\u00a7 YyILdAVHD\n\n371\n\n\u00a320Z S3UIIBPIND [ed1Ul]) epuebn\n\nsasess|g A103e1dsay 1\u00a7 WALAVHD\n\n\u2022 Where Xpert MTB/RIF test is not available, do\n\nSputum smear microscopy for AAFBs (ZN stain) but send the sample for Xpert MTB/RIF test."
+    },
+    {
+        "id": "doc_153",
+        "document": "GeneXpert MTB/Rif: automated DNA test on body samples (sputum, lymphonodes tissue, pleural fluid, CSF etc) which can diagnose pulmonary TB and determine susceptibility to Rifampicin. It is superior to microscopy. Other investigations\n\nX- ray, abdominal ultrasound, biopsies etc. can be used for sputum and GeneXpert negative patients or in case of extrapulmonary TB according to clinical judgement\n\nTST can be used as a supportive test to guide decision to treat for TB in children"
+    },
+    {
+        "id": "doc_154",
+        "document": "putum culture and Drug susceptibility test: is a confirmatory test for TB and also provides resistance pattern to TB medicines. Do this test for:\n\nPatients with Rifampicin resistance reported with GeneXpert\n\nAlso patients on first-line treatment who remain positive at 2 months and are reported Rifampicin sensitive on GeneXpert\n\nPatients suspected to be failing on first-line treatment\n\nNote: All presumed and diagnosed TB patients should be offered an HIV test"
+    },
+    {
+        "id": "doc_155",
+        "document": "5.3.1.1Tuberculosis in Children and adolescents\n\nTB may present at any age in children though the risk is highest below the age of two years. When compared to adults, children are more prone to TB infection, TB disease, and severe forms of TB disease."
+    },
+    {
+        "id": "doc_156",
+        "document": "Risk factors\n\n~ Contact with infectious (pulmonary) case of TB\n\n~ Age < 5 years\n\n372\n\n~ Immunosuppression (HIV, malnutrition, diabetes, etc).\n\n~ Age < 1 year and lack of BCG vaccination are risk factors for severe disease\n\nClinical features\n\n~ Suspect TB in all children with\n\n- Fever > 2 weeks\n\n- Cough >2 weeks\n\n- Poor weight gain for one month\n\n- Close (home) contact of pulmonary TB case.\n\n- In young children, reduced playfulness, poor feeding, decreased activity"
+    },
+    {
+        "id": "doc_157",
+        "document": "- Other signs include swollen lymph nodes in the neck, groin region etc.\n\nInvestigations\n\nBacteriological confirmation of TB is more difficult in children. The diagnosis of TB in children is dependent on conducting a detailed clinical assessment combined with available tests\n\nWhenever possible, geneXpert should be performed Management\n\nThe principles and objectives of TB treatment are similar to those of adults. In addition, effective treatment of TB in children promotes growth and development."
+    },
+    {
+        "id": "doc_158",
+        "document": "5.3.1.2 Drug-Resistant TB\n\nDrug resistance is said to occur when TB organisms continue to grow in the presence of one or more anti-TB medicines.\n\n~ Although several factors can contribute to the development of drug-resistant TB, inadequate anti-TB treatment is prob- ably the most important. Inadequate anti-TB treatment leads to mutation in drug-susceptibility bacilli making them drug resistant."
+    },
+    {
+        "id": "doc_159",
+        "document": "epuebn -\n\n\u00a320Z S3UIIBPIND [ed1Ul])\n\nsaseasiq A1o3eJ1dsay :\u00a7 YyILdAVHD\n\n373\n\n\u00a320Z S3UIIBPIND [ed1Ul]) epuebn\n\nsaseasiq A1o3eJ1dsay :\u00a7 YyILdAVHD\n\nWho is at risk for drug-resistant TB:\n\nContact with known drug-resistant tuberculosis\n\nRetreatments (relapses, treatment after failures, return after loss to follow-up)\n\nHistory of frequent interruption of drug treatment\n\nPatients who remain sputum smear-positive at month 2 or 3 of first-line anti-TB treatment"
+    },
+    {
+        "id": "doc_160",
+        "document": "~ Patients presumed to have DR-TB should be screened using rapid drug susceptibility testing (DST) of rifampicin (Xpert MTB/RIF, Truenat)\n\nAll patients who are drug-resistant TB suspects should therefore have sputum/other specimens taken for culture and DST.\n\n~ Patients with drug-resistant TB should be linked to desi na- ted MDR TB treatment initiation centers in the respective regions\n\nDRUG RESISTANT TB IS A MAJOR PUBLIC HEALTH PROBLEM. INADE- QUATE TB TREATMENT IS THE MAJOR CONTRIBUTING FACTOR"
+    },
+    {
+        "id": "doc_161",
+        "document": "5.3.1.3 Post-TB patient management\n\nA post-TB patient is one who was successfully treated for TB but presents with respiratory symptoms (chest pain, shortness of breath, cough).\n\n~ Re-do standard TB diagnostic evaluation (sputum geneX- pert and Chest X ray)\n\n~ If negative, evaluate for post-TB lung disease e.g., bronchi- ectasias, COPD, pulmonary hypertension."
+    },
+    {
+        "id": "doc_162",
+        "document": "~ In most cases these patients have residual lung damage on Chest X-ray from previous TB, BUT they do not need retreatment if bacteriologically negative\n\n~ Counsel the patient and give supportive treatment e.g., Pulmonary rehabilitation, etc.\n\n374"
+    },
+    {
+        "id": "doc_163",
+        "document": "5.3.2 Management of TB\n\nGeneral principles\n\n~ The country has adopted patient centered care. It is rec- ommended that all TB medicines are taken under direct observation by a treatment supporter (DOT). Digital Adher- ence Technologies (DAT) have been introduced to support treatment adherence.\n\n~ Anti-TB drugs are given in fixed dose combination (FDC) regimens according to the patient\u2019s TB classification"
+    },
+    {
+        "id": "doc_164",
+        "document": "\u2022 Treatment is divided into two phases: an initial (intensive) phase of 2 months and a continuation phase of 4 months (longer in severe forms of TB particularly TB meningitis and osteoarticular TB)TB treatment regimens are expressed in a standard format, e.g. 2RHZE/4RH where:\n\n- Letters represent abbreviated drug names\n\n- Numbers show the duration in months\n\n- shows the division between treatment phases\n\n~ Other shorter term (4-months) treatment regimen recently adopted"
+    },
+    {
+        "id": "doc_165",
+        "document": "\u2022 2 HRE(Z)/2RH for children 2 months to 16 years\n\n\u2022 2 HPMZ/2HPM for adults\n\n~ Anti-TB drugs have side effects and they should be man- aged appropriately (see section 5.3.2.1)\n\n~ TB treatment monitoring should be done by clinical, spu- tum and where possible radiological\n\n~ A conclusion of \u201ctreatment outcome\u201d status should be done for every patient treated for TB.\n\n\u00a320Z S3UIIBPIND [ed1Ul]) epuebn\n\nsaseasiq A1o3eJ1dsay :\u00a7 YyILdAVHD\n\n375\n\n\u00a320Z S3UIIBPIND [ed1Ul]) epuebn"
+    },
+    {
+        "id": "doc_166",
+        "document": "YILAVHD\n\nsaseasiq A103e1d50Y 1\u00a7\n\nFirst line anti-TB medication"
+    },
+    {
+        "id": "doc_167",
+        "document": "Drug Adult Dose Children | Dose Contraindications (C) / Interactions (I) Isoniazid (H) oral | 5 mg/kg (max 300 mg) 10 mg/ kg (range 7-15 mg/ kg) C: Liver disease, known hypersensitivity I: I: carbamazepine, phenytoin"
+    },
+    {
+        "id": "doc_168",
+        "document": "Rifampicin (R) oral 10 mg/kg (max 600 mg) 15 mg/ kg (range 10-20 mg/kg) C: Liver disease, known hypersensitivity I: Oral contraceptives, nevirap- ine, warfarin, phenytoin, glibenclamide Pyrazina- mide (Z) oral 30-40 mg/kg (max 2500 mg) 35 mg/ kg (range 30\u201340 mg/kg) C: Liver disease, known Hypersensitivity"
+    },
+    {
+        "id": "doc_169",
+        "document": "Etham- butol (E) oral 15 mg/kg 20 mg/ kg (range 15-25 mg/kg) C: Pre existing optic neu- ritis, established kidney failure Moxifloxacin (M) oral 10-15mg / Kg Resistance to a fluoro- quinolone"
+    },
+    {
+        "id": "doc_170",
+        "document": "Note\n\nRifampicin interacts with oestrogen-containing contraceptives and reduces the protective efficacy of the contraceptives. Use high dose contraceptive or use an additional barrier method.\n\n376\n\nImportant: The choice of regimen now depends on rifampicin sensitivity and not on the previous history of treatment:\n\nAll patients without rifampicin resistance (either new or re-treat- ments) are treated with 1st line regimen."
+    },
+    {
+        "id": "doc_171",
+        "document": "Patients with rifampicin resistance (either new or re- treatments) are treated with second line medication in a designated MDR-TB treatment facility.\n\nSusceptible TB: 1st line treatment regimens\n\nFor patients without rifampicin resistance to Gene Xpert MTB/Rif (both new and re-treatment cases).\n\nNew cases not belonging to priority (risk) groups and in which diagnosis was done by sputum examination will also be treated with this regimen."
+    },
+    {
+        "id": "doc_172",
+        "document": "Type Of TB Disease Regimen For Susceptible TB TB LOC Intensive Phase | Continuation Phase All forms of TB in adults and children of all ages but excluding TB meningitis and Bone TB) 2RHZE 4RH HC3 TB meningitis Bone (Osteo- articular) TB 2RHZE 10RH HC4and above Alternative 1st-line treat- ment regimen"
+    },
+    {
+        "id": "doc_173",
+        "document": "All forms of TB in children (2 months to 16 years) with non-severe disease 2 HRE(Z) 2RH General Hospital and above All forms of TB in adults above 12 years, weight >40 Kags, if HIV positive CD4>100 cells/L 2 HPMZ 2HPM"
+    },
+    {
+        "id": "doc_174",
+        "document": "\u00a320Z S3UIIBPIND [ed1Ul]) epuebn\n\nsaseasiq A103e1d50Y 1\u00a7 YILAVHD\n\n377\n\n\u00a320Z S3UIIBPIND [ed1Ul]) epuebn\n\nsaseasiq A103e1d50Y 1\u00a7 YILAVHD\n\n378\n\nDrug -resistant TB\n\nPatients with drug-resistant TB should undergo culture and Drug Sen- sitivity testing, and be treated with second line regimens according to national guidelines.\n\nNotify the relevant TB focal persons and organize referral to MDR-TB treatment initiation center for appropriate management."
+    },
+    {
+        "id": "doc_175",
+        "document": "Type Of TB Disease Regimen For Drug Resistant TB LOC INH mono-resist- ance 6(H)REZ\u2013levoflox- acin) DTUS RR/MDR TB Treatment at des- ignated MDR TB treatment initiation centers as per the national guidelines Hospital and above"
+    },
+    {
+        "id": "doc_176",
+        "document": "Pre XDR, XDR Treatment at des- ignated MDR TB treatment initiation centers as per the national guidelines Hospital and above in consultation with national panel"
+    },
+    {
+        "id": "doc_177",
+        "document": "Adjunctive treatment"
+    },
+    {
+        "id": "doc_178",
+        "document": "TREATMENT LOC Vitamin B6 (pyridoxine): 25 mg per day; given con- HC3H comitantly with isoniazid for the duration of therapy, to prevent peripheral neuropathy Prednisolone in TB patients in whom complications of fibrosis are anticipated because of severe inflammation such as TB meningitis. - Prednisolone is given in a dose of 1-2 mg/kg body weight (not more than 60 mg/day) as a single dose for 4 weeks, and then tapered off over 2 weeks"
+    },
+    {
+        "id": "doc_179",
+        "document": "TREATMENT\n\nLaboratory Monitoring (For Pulmonary Tb)\n\nAt the end of the initial 2 months:\n\n- Sputum smear-negative; start continuation phase\n\n- Sputum smear-positive; do GeneXpert to rule out rifampicin resistance, start continuation phase and Xpert MTB/XDR where accessible, to rule out resistance to other drugs\n\nIf Rifampicin-resistant, refer for MDR-TB treatment and\n\nIf Rifampicin-sensitive, continue with first-line\n\ntreatment, explore adherence issues but repeat smear at"
+    },
+    {
+        "id": "doc_180",
+        "document": "At the beginning of 5 months:\n\n- Sputum smear-negative, continue with continuation treatment\n\n- Sputum smear-positive, diagnose Treatment Failure\n\n- Take sputum for GeneXpert to rule out Rifampicin Resistance and Xpert MTB/XDR where accessible, to rule out resistance to other drugs\n\nIf Rifampicin Resistant, refer for DR treatment\n\n- If INH resistant manage as INH mono-resistant TB as above\n\n- If TB detected but not Rifampicin Resistant, restart first line regimen but explore adherence issues"
+    },
+    {
+        "id": "doc_181",
+        "document": "Monitoring of susceptible TB"
+    },
+    {
+        "id": "doc_182",
+        "document": "During the 6th month:\n\n- Sputum smear-negative, complete treatment and declare cured or treatment completed\n\n- Sputum smear-positive, diagnose treatment failure\n\n- Take sputum for GeneXpert to rule out rifampicin resistance and Xpert MTB/XDR where accessible, to rule out resistance to other drugs\n\nIf Rifampicin-resistant, refer for MDR-TB treatment\n\n- If Rifampicin-sensitive, restart first-line treatment, explore adherence issues\n\n\u00a320Z S3UIIBPIND [ed1Ul]) epuebn\n\nsaseasiq A103e1d50Y 1\u00a7 YILAVHD"
+    },
+    {
+        "id": "doc_183",
+        "document": "379\n\n\u00a320Z S3UIIBPIND [ed1Ul]) epuebn\n\nsaseasiq A103e1d50Y 1\u00a7 YILAVHD\n\nClinical Monitoring (For All Tb Cases)\n\n- Monitor wellbeing and weight gain\n\n- Assess and reinforce treatment adherence\n\n- Assess and manage side effects\n\nNote\n\nRadiological monitoring\u2013 this method should not be used as the sole monitoring tool.\n\nManagement of treatment interruptions\n\nRefer to NTLP manual"
+    },
+    {
+        "id": "doc_184",
+        "document": "Treatment outcomes\n\nA conclusion should be made regarding treatment outcome of EVERY TB patient who has been started on anti-TB treatment."
+    },
+    {
+        "id": "doc_185",
+        "document": "OUTCOME DESCRIPTION Cure A pulmonary TB patient with bacteri- ologically confirmed TB at the begin- ning of treatment who was smear- or culture-negative in the last month of treatment and on at least one previous occasion"
+    },
+    {
+        "id": "doc_186",
+        "document": "Treatment completed A TB patient who completed treatment without evidence of failure BUT with no record to show that sputum smear or culture results in the last month of treatment and on at least one previous occasion were negative, either because tests were not done or because results are unavailable"
+    },
+    {
+        "id": "doc_187",
+        "document": "Lost to fol- low-up A TB patient who did not start treat- ment, or completed more than one month of treatment and whose treatment was interrupted for two or more consecutive months"
+    },
+    {
+        "id": "doc_188",
+        "document": "380"
+    },
+    {
+        "id": "doc_189",
+        "document": "OUTCOME DESCRIPTION Died A TB patient who dies for any reason before starting or during the course of treatment Treatment failure A TB patient whose sputum smear or culture is positive at month five or later during treatment"
+    },
+    {
+        "id": "doc_190",
+        "document": "Not evaluated A patient for whom no treatment out- come is assigned. This includes cases \u201ctransferred out\u201d to another treatment unit as well as cases for whom the treatment outcome is unknown to the reporting unit Treatment success The sum of cured and treatment completed"
+    },
+    {
+        "id": "doc_191",
+        "document": "5.3.2.1 Anti-TB Drugs Side Effects\n\nCommon side effects"
+    },
+    {
+        "id": "doc_192",
+        "document": "Drug Side-Effects Isoniazid Hepatitis, peripheral neuropathy Rifampicin Flu-like syndrome, dermatitis, hepatitis, reddish-brown colouration of urine Pyrazin- amide Joint pains, hepatitis Ethambutol Impaired visual acuity and colour vision Moxifloacin Tendonitis, arthralgia, GI disturbance, heamaturia"
+    },
+    {
+        "id": "doc_193",
+        "document": "Treatment completed A TB patient who completed treatment without evidence of failure BUT with no re- cord to show that sputum smear or culture results in the last month of treatment and on at least one previous occasion were neg- ative, either because tests were not done or because results are unavailable"
+    },
+    {
+        "id": "doc_194",
+        "document": "\u00a320Z S3UIIBPIND [ed1Ul]) epuebn\n\nsaseasiq A103e1d50Y 1\u00a7 YILAVHD\n\n381\n\n\u00a320Z S3UIIBPIND [ed1Ul]) epuebn\n\nsaseasiq A103e1d50Y 1\u00a7 YILAVHD\n\nManagement of side effects"
+    },
+    {
+        "id": "doc_195",
+        "document": "Side-Effects Drug(S) Likely To Cause Management Low appe- tite, nausea, abdominal pain Pyrazinamide, Ri- fampicin Give drugs with small meal or just before going to bed Joint pains Pyrazinamide Give an analgesic e.g. ibuprofen or Paracetamol Burning sensation in the feet Isoniazid Pyridoxine 25-100 mg daily"
+    },
+    {
+        "id": "doc_196",
+        "document": "Orange/red urine Rifampicin Reassure the patient that it is not harmful Skin rash (hyper- sensitivity reaction) Any anti-TB drug Depending on degree, see guidelines below Deafness (no wax on auroscopy) Dizziness, vertigo, and nystagmus Streptomycin Stop streptomycin. Use Eth- ambutol"
+    },
+    {
+        "id": "doc_197",
+        "document": "Jaundice (other caus- es es excluded) Pyrazinamide, Ri- fampicin and Iso- niazid Stop anti-TB drugs see guide- lines below Mental con- fusion Isoniazid, Rifampicin and Pyrazinamide 1. If jaundiced, suspect liver failure, stop drugs (see below) 2. If no jaundice, suspect Isoniazid, increase dose of pyridoxine"
+    },
+    {
+        "id": "doc_198",
+        "document": "382"
+    },
+    {
+        "id": "doc_199",
+        "document": "Side-Effects Drug(S) Likely Management To Cause Visual Ethambutol Stop Ethambutol. Use impairment streptomycin (other causes excluded)"
+    },
+    {
+        "id": "doc_200",
+        "document": "Hypersensitivity reaction\n\nMost anti-TB drugs can cause hypersensitisation between week 3 and week 8 of treatment in order of frequency: ethambutol, pyrazinamide, rifampicin and isoniazid.\n\nIf mild (simple itchy rash), give antihistamine (e.g. chlorpheniramine) and moisturizer and continue treatment.\n\nSevere reactions are characterised by\n\n- Fever, headache, vomiting\n\n- Macular dark erythematous rash which can progress to a Steven Johnson-Toxic Epidermal Necrolysis syndrome\n\nAdjunctive treatment"
+    },
+    {
+        "id": "doc_201",
+        "document": "TREATMENT LOC Stop all drugs immediately H Manage supportively Refer for specialised management RR"
+    },
+    {
+        "id": "doc_202",
+        "document": "Drug-induced hepatitis\n\nSevere hepatic damage, presenting with jaundice, vomiting, severe malaise. In order of frequency, the implicated drugs are Isoniazid, Pyrazinamide, Rifampicin and Ethambutol.\n\nAdjunctive treatment"
+    },
+    {
+        "id": "doc_203",
+        "document": "TREATMENT LOC Stop all drugs immediately H Manage supportively When jaundice has resolved, re-introduce single drugs at RR 3-7 days interval, starting from the least likely involved"
+    },
+    {
+        "id": "doc_204",
+        "document": "Manage supportively\n\n\u00a320Z S3UIIBPIND [ed1Ul]) epuebn\n\nsaseasiq A103e1d50Y 1\u00a7 YILAVHD\n\n383\n\n\u00a320Z S3UIIBPIND [ed1Ul]) epuebn\n\nsaseasiq A1o3eJ1dsay :\u00a7 YyILdAVHD\n\nAdjunctive treatment"
+    },
+    {
+        "id": "doc_205",
+        "document": "TREATMENT If reaction very severe, do not try to restart pyrazina- mide. If RH tolerated, do not try pyrazinamide Use alternative regimen avoiding the causative drug LOC H RR"
+    },
+    {
+        "id": "doc_206",
+        "document": "5.3.2.2 Prevention and Infection Control of TB\n\nCase diagnosis and management\n\nA TB patient is more infectious before they start TB treatment.\n\n~ Provide PPE to sputum-positive patients\n\n~ Early detection of cases and initiation of appropriate TB treatment\n\n~ Treatment under directly observed treatment (DOT) and fol- low up to ensure adherence and cure\n\nContact tracing\n\n~ Tracing of contacts of TB patients\n\n~ Routine screening of health workers for latent & active TB"
+    },
+    {
+        "id": "doc_207",
+        "document": "High Priority Patients For Contact Tracing\n\n~ Bacteriologically confirmed PTB (Smear positive or Xpert positive or Culture positive)\n\n~ Cavitation of chest x-ray\n\nOO0\n\n~ Age < 5 years\n\n~ MDR TB \u2022 PLHIV\n\nOther preventive measures\n\n~ BCG vaccination at birth to prevent severe forms of TB\n\n~ TB Preventive Treatment for categories at risk"
+    },
+    {
+        "id": "doc_208",
+        "document": "General hygiene\n\n~ Avoidance of overcrowding\n\n~ Avoid drinking unboiled milk\n\n384\n\n~ Cough hygiene (cover cough with pieces of cloth, washing hands with soap, proper disposal of sputum)\n\n~ Good nutrition\n\n~ Promote good ventilation in housing & transport\n\n\u2022 Open ventilators, windows & doors that allow air exchange"
+    },
+    {
+        "id": "doc_209",
+        "document": "5.3.2.3 Tuberculosis Preventive Treatment\n\nTuberculosis preventive treatment is recommended to prevent the development of active TB disease in an individual who has latent TB infection (LTBI).\n\nUganda guidelines for programmatic management of Latent TB infection recommend TB preventive treatment (TPT ) in the following categories of people:\n\n- Persons living with HIV\n\n- Child & adult contacts of pulmonary TB patients\n\nDo not use TPT in cases of active TB"
+    },
+    {
+        "id": "doc_210",
+        "document": "TREATMENT LOC Exclude active TB Hc3 - Assess for cough, fever, weight loss and nights sweats (Children: cough, fever, poor weight gain) - If any of the TB symptoms are present, do clinical - evaluation for TB - If none is present, TB is unlikely, then rule out contra-indications for TPT medicines. If none, then give Give TPT as per dosing chart below. Note HIV-positive children < 1 year should receive TPT only if they"
+    },
+    {
+        "id": "doc_211",
+        "document": "excluded\n\n\u00a320Z S3UIIBPIND [ed1Ul]) epuebn\n\nsaseasiq A103e1d50Y 1\u00a7 YILAVHD\n\n385\n\n\u00a320Z S3UIIBPIND [ed1Ul]) epuebn\n\nsaseasiq A103e1d50Y 1\u00a7 YILAVHD\n\n5.3.2.5 TB Preventive Treatment Dosing Chart"
+    },
+    {
+        "id": "doc_212",
+        "document": "Medicine frequency & duration Formulation Dose of TPT medicine (mgs) | Dose/ weight Reco 3HP (once weekly rifapentine plus isoni- azid for 3 months) 6H (daily isoniazid Fixed Doze Combination (FDC) Tablet Rifapentine 300mg/ Iso- niazid 300mg 3-5 Single medicine tablet Pyridoxine 25mg/day 3-5"
+    },
+    {
+        "id": "doc_213",
+        "document": "Single medicine tablet Isoniazid 100 mg <10 years 10mg/kg 0.5 > 10 years 5mg/kg Isoniazid 300 mg > 10 years 5mg/kg Single medicine tablet Pyridoxine 25 mg 0.5"
+    },
+    {
+        "id": "doc_214",
+        "document": "3RH (daily Rifampic- Fixed Doze in Isoniazid for 3 Combination months) (FDC) Tablet"
+    },
+    {
+        "id": "doc_215",
+        "document": "386\n\n\u00a3207 S2UII3PIND (21Ul epuebn\n\nsasess|g A103e1dsay 1\u00a7 WALAVHD\n\nRecommended number of tablets per body weight in kilograms\n\nMedicine frequency\n\nFormulation\n\nDose/\n\nDose of TPT\n\nweight\n\nmedicine\n\n& duration"
+    },
+    {
+        "id": "doc_216",
+        "document": "Pkas | 6-9.9Kgs 10- 15kgs 16- 23kgs 24- 30kgs 31- 34kgs | 35- 45kgs >45kgs B 15 2 25 3 3 1 1 1 1 1 1 ."
+    },
+    {
+        "id": "doc_217",
+        "document": "6-9.9 Kgs 1 0 \u2013 - 13.9 kgs 199 kgs 24.9 kgs 34.51445 kgs 3 4 . 5 kgs 44.5 5 49.9 kgs 14-120-/25-/35-|4 -|>50kgs 1 15 2 2.5 15 2 25 1"
+    },
+    {
+        "id": "doc_218",
+        "document": "0.5 1 1 1 1 1 1 1 4-7 kgs 811 12-15 16-24 25- 33- 40-54 kaos kos kos 32 39 kas"
+    },
+    {
+        "id": "doc_219",
+        "document": "(mgs)\n\n3HP (once weekly\n\nRifapentine\n\nFixed Doze\n\n300mg/ Iso-\n\nCombination\n\nrifapentine plus isoni-\n\nazid for 3 months)\n\nniazid 300mg\n\n(FDC) Tablet\n\nPyridoxine\n\nSingle medicine\n\n25mg/day\n\ntablet\n\n6H (daily isoniazid\n\n3\u20135.9\n\nfor 6 months)\n\nkgs\n\nIsoniazid 100\n\n0.5\n\n<10 years\n\nSingle medicine\n\nmg\n\n10mg/kg\n\ntablet\n\n> 10 years\n\n5mg/kg\n\nIsoniazid 300\n\n> 10 years\n\nmg\n\n5mg/kg\n\n0.5\n\nSingle medicine\n\nPyridoxine 25\n\ntablet\n\nmg\n\nin Isoniazid for 3\n\nCombination\n\nkgs\n\nkgs\n\nmonths)\n\n(FDC) Tablet\n\nkgs\n\nkgs\n\nkgs"
+    },
+    {
+        "id": "doc_220",
+        "document": "kgs\n\n387\n\nepuebn [\n\n207 saulapING [ea1uip>\n\nSingle medicine\n\ntablet\n\nSingle medicine\n\ntablet\n\nRH\n\n75mg/50mg\n\nRH\n\n150mg/75mg\n\nPyridoxine\n\n25mg/day\n\n< 10 years\n\nR-15mg/kg\n\nH-10mg/kg\n\n>10 years\n\nR-10mg/kg\n\nH-5 mg/kg\n\n0.5\n\n0.5\n\nsasesas|g A103e1ds oy 1\u00a7 WALAVHD"
+    },
+    {
+        "id": "doc_221",
+        "document": "Medicine frequency & duration 1HP (once daily rifapentine plus isoni- azid for 1 month - 28 days) for adolescents >13 years & adults Formulation Single medicine tablets Dose of TPT medicine (mgs) ne Isoniazid (H) 300mg tablet 4 Rifapentine (P) 150mg tablets / day Pyridoxine 25mg/day Dose/ weight Regardless o f we i g h t band"
+    },
+    {
+        "id": "doc_222",
+        "document": "388\n\n1  2  3  4  4  2  3  1  1  1  1  1  1  1 \n\n0.5\n\n< 10 years\n\nRH\n\n75mg/50mg\n\nR-15mg/kg\n\nH-10mg/kg\n\nSingle medicine\n\ntablet\n\n>10 years\n\nRH\n\n150mg/75mg\n\nR-10mg/kg\n\nH-5 mg/kg\n\nPyridoxine\n\nSingle medicine\n\n0.5\n\n\u00e9\n\nRecommended number of tablets per body weight in kilograms\n\nFormulation\n\nDose of TPT\n\nDose/\n\nMedicine frequency\n\n(mgs)"
+    },
+    {
+        "id": "doc_223",
+        "document": "10\u2013 16\u2013 24\u2013 31- 35- >45kgs 15kgs 23kgs 30kgs 34kgs 45kgs 1 1.5 2 2.5 1 1 1 1 1 1 4 4 1 1 1 1 1 1"
+    },
+    {
+        "id": "doc_224",
+        "document": "1HP (once daily\n\nrifapentine plus isoni-\n\nazid for 1 month - 28\n\nRegardless\n\ndays) for adolescents\n\no f we i g h t\n\n>13 years & adults\n\nband\n\nSingle medicine\n\nne Isoniazid\n\n(H) 300mg\n\ntablets\n\ntablet\n\n4 Rifapentine\n\n(P) 150mg\n\ntablets / day\n\nPyridoxine\n\nsaseas|q A103ex1dsaY 1S HILAVHD\n\n389\n\n[\n\n|\n\n$20Z S3UIAPING e3ju> epuebn\n\nsaseasiq A103e1d50Y 1\u00a7 YILAVHD\n\nPreferred options for Ti"
+    },
+    {
+        "id": "doc_225",
+        "document": "rrererred options 1or 1 TPT medicine option Targ Isoniazid monotherapy Cont: PLHI 3. Pr a. his b. CD| c. W Isoniazid/co-trimoxazole/pyridoxine (Q-TIB) (Q-TIB) PLHI new ( CD4 WHO"
+    },
+    {
+        "id": "doc_226",
+        "document": "3 months of Rifapentine/Isoniazid PLHI Con 1 month of Rifapentine/Isoniazid Prisor Healt!"
+    },
+    {
+        "id": "doc_227",
+        "document": "(-\n\n390\n\n[ N\n\n|"
+    },
+    {
+        "id": "doc_228",
+        "document": "Preventive Treatment t population (active TB ruled out) cts of PBC TB patients < 2 years of age on protease inhibitors gnant women living with HIV with; ory of contact with a TB patient 4 < 200 cells/ml O stage 3 or 4 12 months) in care 200 cells/ml stage 3 or 4"
+    },
+    {
+        "id": "doc_229",
+        "document": "> 2 years of age (not on protease inhibitors (PI) cts of PBC TB patients > 2 years ers workers"
+    },
+    {
+        "id": "doc_230",
+        "document": "TPT medicine option\n\nIsoniazid monotherapy\n\nIsoniazid/co-trimoxazole/pyridoxine (Q-TIB)\n\n1\n\n|\n\n\u00a3202 59UNI9PING [\u20ac21U11D epUCE\n\nsaseasiq A103e1d50Y 1\u00a7 YILAVHD\n\n[ N\n\n391\n\n|"
+    },
+    {
+        "id": "doc_231",
+        "document": "Overview\n\nTuberculosis (TB) is a serious illness that mainly affects the lungs. The germs that cause tuberculosis are a type of bacteria.\n\nTuberculosis can spread when a person with the illness coughs, sneezes or sings. This can put tiny droplets with the germs into the air. Another person can then breathe in the droplets, and the germs enter the lungs."
+    },
+    {
+        "id": "doc_232",
+        "document": "Tuberculosis spreads easily where people gather in crowds or where people live in crowded conditions. People with HIV/AIDS and other people with weakened immune systems have a higher risk of catching tuberculosis than people with typical immune systems.\n\nDrugs called antibiotics can treat tuberculosis. But some forms of the bacteria no longer respond well to treatments."
+    },
+    {
+        "id": "doc_233",
+        "document": "Symptoms\n\nWhen tuberculosis (TB) germs survive and multiply in the lungs, it is called a TB infection. A TB infection may be in one of three stages. Symptoms are different in each stage.\n\nPrimary TB infection. The first stage is called the primary infection. Immune system cells find and capture the germs. The immune system may completely destroy the germs. But some captured germs may still survive and multiply."
+    },
+    {
+        "id": "doc_234",
+        "document": "Most people don't have symptoms during a primary infection. Some people may get flu-like symptoms, such as:\n\nLow fever.\n\nTiredness.\n\nCough.\n\nLatent TB infection. Primary infection is usually followed by the stage called latent TB infection. Immune system cells build a wall around lung tissue with TB germs. The germs can't do any more harm if the immune\n\nsystem keeps them under control. But the germs survive. There are no symptoms during latent TB infection."
+    },
+    {
+        "id": "doc_235",
+        "document": "Active TB disease. Active TB disease happens when the immune system can't control an infection. Germs cause disease throughout the lungs or other parts of the body. Active TB disease may happen right after primary infection. But it usually happens after months or years of latent TB infection.\n\nSymptoms of active TB disease in the lungs usually begin gradually and worsen over a few weeks. They may include:\n\nCough.\n\nCoughing up blood or mucus.\n\nChest pain.\n\nPain with breathing or coughing.\n\nFever."
+    },
+    {
+        "id": "doc_236",
+        "document": "Chills.\n\nNight sweats.\n\nWeight loss.\n\nNot wanting to eat.\n\nTiredness.\n\nNot feeling well in general.\n\nActive TB disease outside the lungs. TB infection can spread from the lungs to other parts of the body. This is called extrapulmonary tuberculosis. Symptoms vary depending on what part of the body is infected. Common symptoms may include:\n\nFever.\n\nChills.\n\nNight sweats.\n\nWeight loss.\n\nNot wanting to eat.\n\nTiredness.\n\nNot feeling well in general.\n\nPain near the site of infection."
+    },
+    {
+        "id": "doc_237",
+        "document": "Active TB disease in the voice box is outside the lungs, but it has symptoms more like disease in the lungs.\n\nCommon sites of active TB disease outside the lungs include:\n\nKidneys."
+    },
+    {
+        "id": "doc_238",
+        "document": "g\n\nLiver.\n\nFluid surrounding the brain and spinal cord.\n\nHeart muscles.\n\nGenitals.\n\nLymph nodes.\n\nBones and joints.\n\nSkin.\n\nWalls of blood vessels.\n\nVoice box, also called larynx.\n\nActive TB disease in children. Symptoms of active TB disease in children vary. Typically, symptoms by age may include the following:\n\nTeenagers. Symptoms are similar to adult symptoms.\n\n1- to 12-year-olds. Younger children may have a fever that won't go away and weight loss."
+    },
+    {
+        "id": "doc_239",
+        "document": "Infants.The baby doesn't grow or gain weight as expected. Also, a baby may have symptoms from swelling in the fluid around the brain or spinal cord, including:\n\no Being sluggish or not active.\n\no Unusually fussy.\n\no Vomiting.\n\no Poor feeding.\n\no Bulging soft spot on the head.\n\no Poor reflexes."
+    },
+    {
+        "id": "doc_240",
+        "document": "When to see a doctor\n\nThe symptoms of tuberculosis are similar to symptoms of many different illnesses. See your health care provider if you have symptoms that don't improve with a few days of rest.\n\nGet emergency care if you have:\n\nChest pain.\n\nSudden, severe headache.\n\nConfusion.\n\nSeizures.\n\nDifficulty breathing.\n\nGet immediate or urgent care if you:\n\nCough up blood.\n\nHave blood in your urine or stool."
+    },
+    {
+        "id": "doc_241",
+        "document": "Prevalence and associated factors of pneumonia among under-fives with acute respiratory symptoms: a cross sectional study at a Teaching Hospital in Bushenyi District, Western Uganda\n\nGloria Kiconco1, Munanura Turyasiima1, Andrew Ndamira1, 2, Ortiz Arias Yamile1, Walufu Ivan Egesa1, Martin Ndiwimana1, Melvis Bernis Maren1"
+    },
+    {
+        "id": "doc_242",
+        "document": "1. Department of Pediatrics, Kampala International University School of Health Sciences, Western Campus. 2. African Medical and Research Foundation (AMREF) Africa, Mbarara, Uganda."
+    },
+    {
+        "id": "doc_243",
+        "document": "Co-author details:\n\nYamile Arias Ortiz: yariasortiz@gmail.com, Tel: +256701728177; Andrew Ndamira: lionandrew411@gmail.com, Tel:+256772456666; Turyasiima Munanura: tumiek2000@gmail.com, Tel: +256776505193; Walufu Ivan Egesa: wiegesa@gmail.com, Tel: +256789766517; Melvis Bernis Maren: Email address: samuelramirez1201@gmail.com Tel: +256704310238; Martin Nduwimana: Email address: docrmartin@yahoo.frTel: +256750969417"
+    },
+    {
+        "id": "doc_244",
+        "document": "Abstract\n\nObjectives: This study assessed the prevalence and associated factors of pneumonia among children under-five years pre- senting with acute respiratory symptoms."
+    },
+    {
+        "id": "doc_245",
+        "document": "Methodology: This was a cross sectional study at the Pediatric Department of Kampala International University \u2013 Teaching Hospital, from the month of April to August 2019. The study included 336 children aged 2 to 59 months presenting with acute respiratory symptoms to the pediatric clinic. Pneumonia diagnosis was made according to the World Health Organi- zation definition, modified by a chest radiograph. Structured questionnaires were used to collect data on socio-demographic, environmental and"
+    },
+    {
+        "id": "doc_246",
+        "document": "nutrition factors and multivariate logistic regression analysis using STATA version 13.0 was done to assess for the factors independently associated with pneumonia."
+    },
+    {
+        "id": "doc_247",
+        "document": "Results: Of the 336 children with acute respiratory symptoms, eighty-six, 86 (25.6%) had pneumonia. Factors significantly associated with pneumonia included: age below 6 months (OR=3.2, 95%CI=1.17-8.51, p=0.023), rural residence (OR=5.7, 95%CI=2.97-11.05, p <0.001), not up-to-date for age immunization status (OR=2.9, 95%CI=1.05-7.98, p=0.039), severe acute malnutrition (OR=10.8, 95%CI=2.01-58.41, p=0.006), lack of exclusive breastfeeding during the first six months (OR=2.9, 95%CI=1.53-5.53,"
+    },
+    {
+        "id": "doc_248",
+        "document": "p=0.001) and exposure to cigarette smoke (OR=3.0, 95%CI=1.35-6.80, p=0.007). Conclusion: The prevalence of pneumonia in children under-five years was high. Most of the factors associated with pneu-"
+    },
+    {
+        "id": "doc_249",
+        "document": "Keywords: Pneumonia, prevalence, under-fives.\n\nDOI: https://dx.doi.org/10.4314/ahs.v21i4.25\n\nCite as: Kiconco G, Turyasiima M, Ndamira A, Yamile OA, Egesa WI, Ndiwimana M, et al. Prevalence and associated factors of pneu- monia among under-fives with acute respiratory symptoms: a cross sectional study at a Teaching Hospital in Bushenyi District, Western Uganda. Afri Health Sci. 2021;21(4):1701-10. https://dx.doi.org/10.4314/ahs.v21i4.25"
+    },
+    {
+        "id": "doc_250",
+        "document": "Corresponding author: Gloria Kiconco, Pediatrics and child Health (2020), Kampala International University Teaching Hospital Ishaka Bushenyi. Tel: +256779926658. Email Address: littlebabygal@gmail.com"
+    },
+    {
+        "id": "doc_251",
+        "document": "Introduction\n\nPneumonia is the most common infectious cause of death in children accounting for 16% of all deaths of under-fives worldwide, it is most prevalent in south Asia and sub-Saharan Africa 1 and is the second leading cause of under-five in-patient mortality in Uganda 2. System- atic review and meta-analysis of data on pneumonia across East African countries, estimated the average prevalence of pneumonia in under-fives at 34% 3. In"
+    },
+    {
+        "id": "doc_252",
+        "document": "African Health Sciences \u00a9 2021 Kiconco G et al. Licensee African Health Sciences. This is an Open Access article distributed under the terms of the Creative commons Attribution Li- cense (https://creativecommons.org/licenses/BY/4.0), which permits unrestricted use, distribution, and reproduction in any medium, provided the original work is properly cited.\n\nAfrican Health Sciences, Vol 21 Issue 4, December, 2021\n\n1701"
+    },
+    {
+        "id": "doc_253",
+        "document": "Uganda, 80% of children under five years that sought treatment from a health worker had symptoms of an acute respiratory infection 4. A study was done at Mu- lago national Referral Hospital in Uganda and record- ed a prevalence at 53.7% 5. Studies in different African countries have estimated pneumonia prevalence among under-fives between 16% and 33% 6, 7, 8."
+    },
+    {
+        "id": "doc_254",
+        "document": "The leading risk factors that contribute to pneumonia incidence are lack of exclusive breastfeeding, under-nu- trition, indoor air pollution, low birth weight, over crowding lack of immunization and comorbid condi- tions 9,10. Children with compromised immune systems like malnutrition especially in infants not exclusively breastfed are at higher risk of developing pneumonia 1, 9. The burden of child hood Pneumonia has declined but the rate of decline is slow compared to other infec- tious"
+    },
+    {
+        "id": "doc_255",
+        "document": "diseases in children 1."
+    },
+    {
+        "id": "doc_256",
+        "document": "The government of Uganda has implemented the strat- egies adapted from Global Action Plan for Prevention and Control of Pneumonia (GAPP) which includes a combination of interventions to protect, prevent, and to treat pneumonia for example vaccination, encourag- ing exclusive breastfeeding for six months and access to proper pneumonia treatment, however in Uganda we are still below the national targets 4, 11, 12 which has con- tributed to a high Under-five mortality 4. This study de- termined the"
+    },
+    {
+        "id": "doc_257",
+        "document": "prevalence of pneumonia and described factors associated with pneumonia among children be- tween 2 and 59 months with acute respiratory symptoms attending to Kampala International Teaching Hospital (KIU-TH) in Bushenyi district Western Uganda."
+    },
+    {
+        "id": "doc_258",
+        "document": "Methods and materials"
+    },
+    {
+        "id": "doc_259",
+        "document": "Study design and participants: This study was a hospi- tal based descriptive cross sectional and analytical study in the Pediatric Department of Kampala International University Teaching Hospital (KIU-TH), a private ter- tiary hospital located in Ishaka-Bushenyi municipality Bushenyi district Western Uganda. It serves as a refer- ral center for hospitals and health centers around the districts of Bushenyi, Sheema, Buhweju and Mitooma. KIU-TH provides general and specialized services, has"
+    },
+    {
+        "id": "doc_260",
+        "document": "outpatient and inpatient departments for each disci- pline with an emergency wing and intensive care unit. The Pediatric department has five 5 sections: pediat- ric ward, neonatal ward, Pediatric OPD and emergency. The study was conducted in the pediatric ward, pediat- ric OPD and emergency ward. According to KIU T-H"
+    },
+    {
+        "id": "doc_261",
+        "document": "records in 2018, approximately 280 children under five years attend to KIU T-H per month and around 70% present with acute respiratory symptoms and about one child died of pneumonia every month.\n\nThree hundred thirty-six (336) children aged between 2 and 59 months presenting with acute respiratory symp- toms at the pediatric out patient, emergency and pedi- atric ward were consecutively recruited into the study from the months of April to August 2019."
+    },
+    {
+        "id": "doc_262",
+        "document": "Study procedure: All the children aged 2-59 months who attended to KIU-TH with acute respiratory symptoms (running nose, cough, fast breathing and/or difficulty in breathing) during the study period were consecutive- ly recruited for the study. Children with acute respirato- ry symptoms were identified from the presenting com- plaint at outpatient clinic, Emergency ward or in the pediatric ward. Consent ws obtained from the children\u2019s parents/caretakers after the primary reason for seeking"
+    },
+    {
+        "id": "doc_263",
+        "document": "health care had been taken care of and any emergency treatment (if required) given."
+    },
+    {
+        "id": "doc_264",
+        "document": "We excluded children with obvious clinical features of acute aspiration (near drowning and acute foreign body inhalation) since there was a known cause."
+    },
+    {
+        "id": "doc_265",
+        "document": "A structured questionnaire was used to capture com- prehensive data on acute respiratory symptoms, so- cio-demographic information, breast feeding history, birth weight, immunization status, environmental fac- tors and comorbid medical conditions like Human Im- mune Virus infection (HIV), cerebral palsy and heart disease that could be associated with pneumonia. Birth weight was checked from the immunization cards and by direct interview of parents/caretakers for those who did not have the cards"
+    },
+    {
+        "id": "doc_266",
+        "document": "at the time of data collection. Urban residence was referred to as cities, municipali- ties and towns with a population over 2,000 persons 13. Parental smoking as an environmental risk factor for pneumonia applied only when the smoker stays in the same environment with the child."
+    },
+    {
+        "id": "doc_267",
+        "document": "Physical examination was done for every child to docu- ment nutritional status and clinical features of pneumo- nia including: increased respiratory rate (according to age), chest in drawing and crackles or added sounds on chest auscultation. Chest radiographs were only done for children with clinical features of pneumonia based on World Health Organization Cough and/or difficulty in breathing with fast breathing and/or chest in draw- ing).\n\n1702"
+    },
+    {
+        "id": "doc_268",
+        "document": "African Health Sciences, Vol 21 Issue 4, December, 2021"
+    },
+    {
+        "id": "doc_269",
+        "document": "Children presenting   Initial history (age and   to the hospital   presenting complaint)    Aged 2-59 mo without acute   respiratory symptoms \u2013   managed for their respective   conditions   Aged 2-59 mo with   acute respiratory   symptoms \u2013 consent   for the study    Acute foreign body   inhalation or near-drowning   - excluded   No clinical features of   Clinical features of   pneumonia   Detailed history and   pneumonia   (WHO criteria)   examination   (WHO criteria)   Managed according to"
+    },
+    {
+        "id": "doc_270",
+        "document": "the diagnosis   Associated factors for   pneumonia   Chest X-ray   No chest X-ray   findings of pneumonia   Chest X-ray   features of   pneumonia   Has identified   respiratory focus of   infection   Has no identified respiratory   focus of infection   (pharyngitis, tonsillitis, otitis   Pneumonia    media, etc)   Managed for their   respective diagnoses  "
+    },
+    {
+        "id": "doc_271",
+        "document": "Fig 1: Flow chart showing summery of the study procedure"
+    },
+    {
+        "id": "doc_272",
+        "document": "Pneumonia definition: In this study pneumonia was defined as presence Cough and/or difficulty in breath- ing with fast breathing and/or chest in drawing 14. These symptoms also present in other many acute respiratory conditions. Therefore the definition was modified with presence of positive chest X-ray findings of pneumonia which included one of the following: infiltrates, consol- idation, pleural effusion, and empyema indicated pneu- monia 15"
+    },
+    {
+        "id": "doc_273",
+        "document": "However, children who had clinical features of pneu- monia using WHO/IMCI criteria but with normal chest X-ray and had no other identified respiratory fo- cus of infection like pharyngitis, tonsillitis, and otitis media were considered to have pneumonia. This was because a normal chest X-ray might not rule out pneu- monia since sensitivity is around 83.3% 16. Children with identified respiratory focus of infection and had no fea- tures of pneumonia on chest Radiograph were given other respective"
+    },
+    {
+        "id": "doc_274",
+        "document": "diagnoses according to the examina- tion findings"
+    },
+    {
+        "id": "doc_275",
+        "document": "Severe pneumonia: Was defined as presence of pneu- monia plus one or more of the danger signs (lethar- gy, dehydration, cyanosis, vomiting everything, failure to feed, convulsions, oxygen saturation <90%, axillary temperature > 39.5degrees centigrade, severe chest in-drawing) 14."
+    },
+    {
+        "id": "doc_276",
+        "document": "Nutritional status: Nutritional status was assessed ac- cording to the WHO nutritional charts 17 and classified as normal nutritional status, moderate acute malnutri- tion (MAM) and severe acute malnutrition (SAM). Weight was measured using a weighing scale (salter type baby weighing scale for infants and those who could not stand) and digital electric weighing scale when the child completely undressed and rounded to the nearest 0.1kg. The body length/height was measured using a Stadiometer and"
+    },
+    {
+        "id": "doc_277",
+        "document": "length measuring board and recorded in centimeters, Mid-upper arm circumference (MUAC) was measured using a MUAC tape and recorded in cen- timeters."
+    },
+    {
+        "id": "doc_278",
+        "document": "African Health Sciences, Vol 21 Issue 4, December, 2021\n\n1703\n\nImmunization status: Child health cards were used to assess the immunization status of children. Appro- priate history about immunization using a checklist was used for caretakers who did not have immunization cards at the time of data collection. Children who had not received all vaccinations expected for their age or had never been immunized at all were labeled not up to-date for age."
+    },
+    {
+        "id": "doc_279",
+        "document": "Data management: Data collection tools were pre- tested to ensure reliability and validity, questionnaires were translated into local language (Runyankole). Leg- ibility was ensured by daily auditing of the question- naires. Chest x-rays were taken by a radiologist and interpreted properly. Radiographic films were attached to the respective questionnaires to avoid misplacement. Privacy and confidentiality were ensured by conduct- ing interviews in the closed clinic and all data collected kept in"
+    },
+    {
+        "id": "doc_280",
+        "document": "a lock and password protected computer. After collection, data was arranged, coded and entered into the computer using the EXCEL 2016 then imported to STATA version 13.0 (Statacorp, College station, USA) for analysis."
+    },
+    {
+        "id": "doc_281",
+        "document": "Data analysis: Data was analyzed using STATA ver- sion 13.0 (Statacorp, College station, USA). The prev- alence of pneumonia among children presenting with acute respiratory symptoms was analyzed using fre- quencies, percentages and corresponding 95% confi- dence interval (CI). Factors associated with pneumonia were analyzed using univariate and multivariate logistic regression. Factors with p-value \u22640.2 at univariate anal- ysis qualified to be taken to multivariate analysis. Meas- ures of"
+    },
+    {
+        "id": "doc_282",
+        "document": "effect were reported using odds ratios for both crude and adjusted analysis, followed by corresponding"
+    },
+    {
+        "id": "doc_283",
+        "document": "95% CI and p-value. At multivariate analysis, factors with p-value \u22640.05 were considered statistically signifi- cant. The results were presented in tables.\n\nEthical considerations: Ethical approval was obtained from the research ethics committee (REC) of Kampa- la International University (Nr UG-REC-023/201902). Informed consent was sought from parents/caretakers of children and the purpose of the study well explained before administering the questionnaire."
+    },
+    {
+        "id": "doc_284",
+        "document": "Study limitations: Some parents/caretakers had no immunization cards at the time of recruitment in to the study and were not clear with the information regarding their immunization status and birth weight, however, history on age and site at immunization based on the UNEPI guidelines was used to help them recall though a few of them could not recall at all."
+    },
+    {
+        "id": "doc_285",
+        "document": "Results\n\nParticipants\u2019 socio-demographics characteristics Among the 336 children aged 2 to 59 months present- ing with acute respiratory symptoms; majority were of age category 24-59 months, males were slightly more than females. Most children were of rural residence and their parents/caretakers had attained primary and sec- ondary level of education. This is shown in table 1."
+    },
+    {
+        "id": "doc_286",
+        "document": "Participants\u2019 medical and environmental charac- teristics\n\nMajority of the children had their immunization up- to-date for their age, were exclusively breastfed up to six months, had normal nutritional status, with no co- morbidity and had normal weight at birth. Most of the children came from families that cook from outside the main house using biomass and their parents/caretakers were non-smokers (Table 2).\n\n1704\n\nAfrican Health Sciences, Vol 21 Issue 4, December, 2021"
+    },
+    {
+        "id": "doc_287",
+        "document": "Table 1: Participants\u2019 socio-demographic characteristics"
+    },
+    {
+        "id": "doc_288",
+        "document": "Characteristic Frequency, n ( Age (months) 2-5 54 (16.1) 6-11 69 (20.5) 12-23 39 (11.6) 24-59 74 (51.8) Sex Male 79 (53.3) Female 57 (46.7) Residence Urban 54 (45.8) Rural 182 (54.2)"
+    },
+    {
+        "id": "doc_289",
+        "document": "Parental/care taker\u2019s education No education 21 (6.3) Primary 41 (42.0) Secondary 99 (29.5) Tertiary 75 (22.3) Marital status Married 304 (90.5) Single 32 (9.5) Religion Catholic 143 (42.6) Anglican 127 (37.8)"
+    },
+    {
+        "id": "doc_290",
+        "document": "Muslim 32 (9.5) Pentecostal 34 (10.1) Tribe Banyonkole/Bakiga 308 (91.7) Baganda 17 (5.1) Others 11 (3.3)"
+    },
+    {
+        "id": "doc_291",
+        "document": "Table 2: Participant\u2019s medical and environmental characteristics\n\n(%)"
+    },
+    {
+        "id": "doc_292",
+        "document": "Characteristic Freguencx, n (%! Medical characteristics Immunization status Up-to-date for age 309 (92.0) Not up-to-date 27 (8.0) Nutritional status Normal nutrition 238 (95.2) Moderate acute malnutrition 10 (4.0) Severe acute malnutrition 2 (0.8)"
+    },
+    {
+        "id": "doc_293",
+        "document": "Exclusive breast feeding for 6months No 71 (21.1) Yes 265 (78.9) Comorbidity No 327 (97.3) Yes 9 (2.7) Birth weight 2.5-3.99 251 (74.7) <2.5 15 (4.5) 4+ 27 (8.0) Unknown 43 (12.8) Environmental Characteristics"
+    },
+    {
+        "id": "doc_294",
+        "document": "Place of cooking Indoor 112 (33.3) Outdoor 224 (66.7) Parental/care taker smoking No 301 (89.6) Yes 35 (10.4)"
+    },
+    {
+        "id": "doc_295",
+        "document": "African Health Sciences, Vol 21 Issue 4, December, 2021\n\n1705\n\nPrevalence of pneumonia among children aged 2 to 59 months presenting with acute respiratory symptoms\n\nEighty-six (25.6%) children under-five years had pneu-\n\nmonia; 24 (27.9%) of these had the severe form. Pneu- monia was more prevalent in children below 6 months of age and affected more of males than females (Table 3).\n\nTable 3: Prevalence of pneumonia by age and sex"
+    },
+    {
+        "id": "doc_296",
+        "document": "Prevalence N n % p-value Overall 336 86 25.6 0.127 Age specific 2-5 54 20 37.0 6-11 69 13 18.8 12-23 39 11 282 24-59 174 42 24.1"
+    },
+    {
+        "id": "doc_297",
+        "document": "Gender specific 0.767 Male 179 47 263 Female 157 39 24.8"
+    },
+    {
+        "id": "doc_298",
+        "document": "Factors associated with pneumonia among chil- dren aged 2 to 59 months presenting with acute respiratory symptoms\n\nAge of the child, place of residence, parental education, religion, parental smoking, immunization status, nutri- tional status, exclusive breast feeding and having co-"
+    },
+    {
+        "id": "doc_299",
+        "document": "morbidity were associated with pneumonia at univariate analysis. After adjusting for confounders at multivari- ate analysis; children who were aged below 6 months, not immunized up-to-date for age, severely malnour- ished, not exclusively breastfed and exposed to cigarette smoke were more likely to suffer from pneumonia (Ta- ble 4).\n\n1706\n\nAfrican Health Sciences, Vol 21 Issue 4, December, 2021\n\nTable 4: Results of bivariate and multivariate analysis for factors associated with pneumonia"
+    },
+    {
+        "id": "doc_300",
+        "document": "Variable No pneumonia n (%) Pneumoni a n (%) Unadjusted OR (95% CI) Adjusted OR (95% cI p-value Age (months) 2-5 34 (13.6) 20 (23.3) 2.5 (1.12-5.74) 3.2 (1.17-8.51) 0.023 6-11 56 (22.4) 13 (15.1) 1.0 1.0 -"
+    },
+    {
+        "id": "doc_301",
+        "document": "12-23 28 (11.2) 11 (12.8) 1.7 (0.67-4.26) 3.0 (0.96-9.54) E)AOSS 0.058 24-59 132 (52.8) 42 (48.8) 1.4 (0.68-2.75) 2.2 (0.91-5.17) 0.081 Sex Male 132 (52.8) 47 (54.6) 1.0 Female 118 (47.2) 39 (45.4) 0.9 (0.57-1.52) Residence"
+    },
+    {
+        "id": "doc_302",
+        "document": "Urban 139 (55.6) 15 (17.4) 1.0 1.0 - Rural 111 (44.44) 71 (82.6) 5.9 (3.22-10.91) 5.7 (2.97-11.05) <0.001 Parental/caretaker ed ucation 12 (4.8) 9 (10.5) 4.4 (1.49-12.79) No education 98 (39.2) 43 (50.0) 2.6 (1.23-5.32)"
+    },
+    {
+        "id": "doc_303",
+        "document": "Primary 76 (30.4) 23 (26.7) 1.8 (0.80-3.89) Secondary 64 (25.6) 11 (12.8) 1.0 Tertiary Marital status Married 227 (90.8) 77 (89.5) 1.0 1.2 Single 23 (9.2) 9 (10.5) (0.51-2.60) Religion"
+    },
+    {
+        "id": "doc_304",
+        "document": "Catholic 10 (44.0) 33 (38.4) 1.0 Anglican 95 (38.0) 32 (37.2) 1.1 (0.64-1.96) Muslim 28 (11.2) 4 (4.7) 0.5 (1.56-1.46) Pentecostal 7(6.8) 17 (19.8) 3.3 (1.53-7.25) Tribe Banyankole/B 228 (91.2) 80 (93.0) 1.0"
+    },
+    {
+        "id": "doc_305",
+        "document": "akiga 3(5.2) 4 (4.7) 0.9 (0.28-2.77) Baganda 9 (3.6) 2 (2.3) 0.6 (0.13-2.99) Others Place of cooking Indoor 82 (32.8) 30 (34.9) 1.0 Outdoor 68 (67.2) 56 (65.1) 0.9 (0.54-1.53) Parental/caretaker"
+    },
+    {
+        "id": "doc_306",
+        "document": "231 (92.4) 70 (81.4) 1.0 1.0 smoking E)A007 - No 9(7.6) 16 (18.6) 2.8 (1.36-5.69) 3.0 (1.35-6.80) 0.007 Yes Immunization status 1.0 1.0 235 74 Up-to-date for (94.0) 5(6.0) (86.0) 12 E)A039 - age (14.0) 2.5 (1.14-5.67) 2.9 (1.05-7.98) Not up-to- 0.039 date for age"
+    },
+    {
+        "id": "doc_307",
+        "document": "Exclusive breast feeding 41 (16.4) 30 (34.9) 2.7 (1.57-4.76) 2.9 (1.53-5.53) 0.001 No 209 (83.6) 56 (65.1) 1.0 1.0 - Yes Nutritional status Normal 238 (95.2) 70 (81.4) 1.0 1.0 -"
+    },
+    {
+        "id": "doc_308",
+        "document": "nutrition 10 (4.0) 8 (9.3) 2.7 (1.03-7.15) 2.9 (0.99-8.64) E)A052 0.052 MAM SAM 2 (0.8) 8 (9.3) 13.6 (2.82- 65.52) 10.8 (2.01-58.41) 0.006"
+    },
+    {
+        "id": "doc_309",
+        "document": "MAM: moderate acute malnutrition, SAM: severe acute malnutrition\n\nAfrican Health Sciences, Vol 21 Issue 4, December, 2021\n\n1707\n\nDiscussion"
+    },
+    {
+        "id": "doc_310",
+        "document": "The prevalence of pneumonia was at 25.6% in this study. This prevalence is low compared to findings in a study at Mulago National Referral Hospital Uganda which recorded prevalence of pneumonia in under-fives at 53.7% 5. This could be because of the difference in the study setting. Since Mulago Hospital is near the city, children are likely to be affected by environmental pol- lution, overcrowding and exposure to smoke due to in- door cooking with biomass which predispose to pneu- monia with a"
+    },
+    {
+        "id": "doc_311",
+        "document": "high odds of above 1.5 as found in some studies 3, 7,18. Because most children under-five years visit hospitals due to symptoms of acute respiratory infection 3, the prevalence of pneumonia in this study is almost similar to the hospital based studies among all under-fives (33.5%) in Ethiopia 7, 20.2%) in Sudan 19 and (21%) in Kenya 20."
+    },
+    {
+        "id": "doc_312",
+        "document": "Children of rural residence had 5.7 higher odd of having pneumonia in this study compared to the ur- ban residence, findings are comparable with a study in Ethiopia 6 that reported 4.5 higher odds of developing pneumonia among children of rural residence. The dif- ference could be explained by the low socioeconomic status, low education level in rural areas that are associ- ated with an increased risk of pneumonia 21. However, some studies found an opposite with an increased risk of pneumonia in"
+    },
+    {
+        "id": "doc_313",
+        "document": "urban than rural 19 with more children in urban setting suffering from acute respiratory infec- tions compared to those from rural setting 21. This is because of exposure to factors like environmental air pollution and overcrowding in urban areas which have been found to be associated with pneumonia 7,16. Children aged 2-6 months had 3.2 times higher odd of suffering from pneumonia compared to older infants. A study in Ethiopia 7 found that children who were aged 2-12 month were 2.5 times more"
+    },
+    {
+        "id": "doc_314",
+        "document": "likely to develop pneu- monia as compared to children above 12 months. The findings can be attributed to the weak immune system in these young infants that allows progression of upper respiratory infection to the lungs causing pneumonia 8."
+    },
+    {
+        "id": "doc_315",
+        "document": "Children not exclusively breastfeed for six months, not up to date immunized for their age according to nation- al guidelines had almost 3 times odds of having pneu- monia compared to the exclusively breast fed and im- munized. The findings were comparable with what was found in a study in Brazil 22 where the odds of having pneumonia was 2.4 times higher in children not exclu- sively breast fed and 2.5 times among those who lacked immunization compared to their counterparts. Exclu-"
+    },
+    {
+        "id": "doc_316",
+        "document": "sive breast feeding and Immunization protects and prevents children from pneumonia 1, this explains why children who lacked these factors had a high chance of developing pneumonia compared to their counterparts. Children with severe acute malnutrition in this study were 11 times more likely to have pneumonia than chil- dren with good nutritional status. The findings were similar to related studies in southern Ethiopia 23, in dis- trict hospitals of Malawi 24 and in a tertiary Care Centre in"
+    },
+    {
+        "id": "doc_317",
+        "document": "Pradesh India 25. This is because malnutrition weak- ens the immune system and increases the susceptibility of children to acquire pneumonia 9"
+    },
+    {
+        "id": "doc_318",
+        "document": "Having a co-morbidity for example HIV, asthma, cer- ebral palsy and congenital heart disease was associated with an increased odd of having pneumonia at bivar- iate analysis. A case control study in eastern Kenya 26 found 3.8 odd of having pneumonia in children with a comorbid condition. These comorbidities compromise the immunity of children rendering them susceptible to developing pneumonia following an upper respira- tory tract infection. The results at multivariate analy- sis did not show"
+    },
+    {
+        "id": "doc_319",
+        "document": "any statistical significance and this is because the number of children with co-morbidities in this study was small."
+    },
+    {
+        "id": "doc_320",
+        "document": "Children who were exposed to cigarette smoke were found to have 3 times higher odds of acquiring pneu- monia compared to children who stayed in environment free of cigarette smoke. These findings were compara- ble to the study in Ethiopia 7 which found that exposure to cigarette smoke increased the odds of having pneu- monia by 2.8 times. This is because smoke from the cigarette damages the epithelial lining of the respiratory tract and weakens the innate immune system which al- lows easy"
+    },
+    {
+        "id": "doc_321",
+        "document": "colonization by the microorganisms. Howev- er, another study in Ethiopia 6 did not find association between cigarette smoke exposure and pneumonia in children under-five years."
+    },
+    {
+        "id": "doc_322",
+        "document": "Conclusion"
+    },
+    {
+        "id": "doc_323",
+        "document": "The prevalence of pneumonia among children present- ing with acute respiratory symptoms is high at KIU- TH in Bushenyi and most of the factors associated with pneumonia are modifiable and can be prevented. Therefore emphasis should be put on Health Education to sensitize the community about the preventive meas- ures in addition to appropriate antibiotic treatment of children who already have pneumonia. This is achieva- ble when there is District Health Team Support Super- vision to the lower"
+    },
+    {
+        "id": "doc_324",
+        "document": "health facilities and continued sen- sitisation on timely routine immunisation of children,"
+    },
+    {
+        "id": "doc_325",
+        "document": "1708\n\nAfrican Health Sciences, Vol 21 Issue 4, December, 2021\n\navoiding exposure to cigarette smoke, exclusive breast- feeding, good nutrition practices and prompt antibiotic treatment of children diagnosed with pneumonia\n\nAcknowledgement\n\nWe acknowledge the radiology department of Kampa- la International University Teaching Hospital for the good work done in taking and interpretation of the chest radiographs."
+    },
+    {
+        "id": "doc_326",
+        "document": "Conflict of interest\n\nThe authors have no conflict of interest associated with material presented in this paper.\n\nReferences\n\n1 World Health Organization (WHO). (2016). Pneumo- nia Key Facts. Retrieved from www.who.int on 17th March 2019\n\n2 Ministry of Health (MOH). (2015). Health Sec- tor Development Plan 2015/16-2019/20. https://doi. org/10.1093/intimm/dxu005"
+    },
+    {
+        "id": "doc_327",
+        "document": "3 Biruk B, Melaku B, Ayelign M, Mesfin W, Molla A, Bimerew B, A. et al. Prevalenc of pneumonia and its associated factors among under-five children in East Africa: a systematic review and meta-analysis. BMC Pediatr 2020. 20, 254 https://doi.org/10.1186/s12887- 020-02083-z."
+    },
+    {
+        "id": "doc_328",
+        "document": "4 Uganda Bureau of Statistcs (UBOS) and ICF. Uganda Demographic and Health Survey: Key Indicators Re- port. Kampala, Uganda: UBOS, and Rockville, Mar- yland, USA: UBOS and ICF 4 2016. Retrieved from https://dhsprogram.com/pubs/pdf/PR80/PR80.pd- f%0Awww.ubos.org"
+    },
+    {
+        "id": "doc_329",
+        "document": "5 Nantanda R, Tumwine JK, Ndeezi G O M. Asthma and Pneumonia among Children Less Than Five Years with Acute Respiratory Symptoms in Mulago Hospi- tal, Uganda: Evidence of Under-Diagnosis of Asthma. PLoS One 2013;8(11): e81562. Retrieved from https:// doi.org/10.1371/journal.pone.0081562"
+    },
+    {
+        "id": "doc_330",
+        "document": "6 Fekadu G.A, Terefe M.W, Alemie G.A Prevalence of pneumonia among under-fives Children in Este Town and the Sorrounding RuralKebeles, Northwest Ethio- pia; A Community Based Cross Sectional Study. Science Jounal of Public Health 2014; 3(2): 150- 155.\n\n7 Abuka T. Prevalence of pneumonia and factors as- sociated among children 2-59 months old in Wondo Genet district , Sidama zone , SNNPR , Ethiopia. Curr Pediatr Res 2017;21(1): 19\u201325."
+    },
+    {
+        "id": "doc_331",
+        "document": "8 Uwemedimo O, Lewis T, Essien E, Grace J. C, Hum- phreys N, Margaret E.K, et.al. Distribution and Determi- nants of Pneumonia Diagnosis Using Integrated Man-\n\nagement of Childhood Illness Guidelines: A Nationally Representative Study in Malawi. BMJ Glob Health; 2018; 3: E000506. Doi: 10.1136/ Bmjgh-2017-000506"
+    },
+    {
+        "id": "doc_332",
+        "document": "9 Chisti M J, Tebruegge M, La Vincente S, Graham S M, Duke T. Pneumonia in severely malnourished chil- dren in developing countries - Mortality risk, aetiology and validity of WHO clinical signs: A systematic review. Tropical Medicine and International Health 2009;14(10): 1173\u20131189.\n\n10 Rudan I, Boschi-pinto C, Biloglav Z, Mulholland K, Campbell H. WHO | Epidemiology and etiology of childhood pneumonia. Bulletin of the World Health Organization 2010; 22(i): 9\u201311."
+    },
+    {
+        "id": "doc_333",
+        "document": "11 Nabunya P, Mubeezi R, Awor P Prevalence of exclu- sive breastfeeding among mothers in the informal sec- tor, Kampala Uganda. PLoS One 2020; 15(9): e0239062. https://doi.org/\n\n10.1371/journal.pone.0239062\n\n12 Kibuule D, Kagoya H R and Brian G. Antibiotic use in acute respiratory infections in under-fives in Uganda: findings and implications. Expert Review of Anti-infective"
+    },
+    {
+        "id": "doc_334",
+        "document": "13 Uganda Bureau of Statistics (UBOS) and ICF Inter- national Inc. Uganda Demographic and Health Survey 2011. Kampala, Uganda. Retrieved from ICF Interna- tional Inc\n\n14 World Health Organisation/ Intergrated Man- agement of Childhood Illineses last updated in 2016 (WHO/IMCI) https:/www.who.int/maternal-child-ad- olescent/topics/imci/en/ retrived on feb 2019.\n\n15 O\u2019Grady AK, Torzillo PJ, Frawley K, Chang A B. The radiological diagnosis of Pneumonia in children. Pneumonia 2014; 5:38-51"
+    },
+    {
+        "id": "doc_335",
+        "document": "16 Vojko B, Natalija P, Anja P, Matjaz H, Maja T, Brigita K. Sensitivity of chest ultrasound in the detection of pneumonia in children, European Respiratory Journal 2015 46: OA492; DOI: 10.1183/13993003.congress-2015. OA492\n\n17 WHO Child Growth Standards: Lenth/height- for-age, weight-for-age, weight- for length.weight- for- heght and body mass index- for- age: Methods and de- velopment. Geneva:2006."
+    },
+    {
+        "id": "doc_336",
+        "document": "18 Fonseca Lima E J, Mello M J G, Albuquerque M de F P M de, Lopes M I L, Serra G H C, Lima D EP, et al, Risk factors for community-acquired pneumonia in children under five years of age in the post pneumococ- cal conjugate vaccine era in Brazil: A case control study. BMC Pediatrics 2016; 16(1): 1\u20139.\n\n19 Abdelsafi A G, Goaher M A A, Mohammed A E. Childhood Pneumonia at Omdurman Paediatric Hos- pital, Khartoum, Sudan, International Journal of Multi-"
+    },
+    {
+        "id": "doc_337",
+        "document": "African Health Sciences, Vol 21 Issue 4, December, 2021\n\n1709\n\ndisciplinary and Current Research 2014; (2): Available at: http://ijmcr.com\n\n20 Jeffrey A T, Ayub S M, Norbert O, Stewart K, Rob- ert B, Daniel R. F. The Epidemiology of Hospitalized Pneumonia in Rural Kenya: The Potential of Surveil- lance Data in Setting Public Health Priorities. Interna- tional Journal of Infectious Diseases 2007; (11): 536\u2014543. Doi: 10.1016/J.Ijid.2007.03.006. Http://Intl.Elsevier- health.Com/Journals/Ijid"
+    },
+    {
+        "id": "doc_338",
+        "document": "21 Ganesh S K, Veera K, Bijay N N, Kalaiselvi S, Karthik B. Prevalence of acute respiratory infection among under-five children in urban and rural areas of Puducherry, India, J Nat Sci Biol Med. 2015;6(1):3-6. doi: 10.4103/0976- 9668.149069."
+    },
+    {
+        "id": "doc_339",
+        "document": "22 Saha S K L, Farrar J L, Hossain B, Islam M, Naw- shad A S M, Saha S K. Epidemiology and risk factors for pneumonia severity and mortality in Bangladeshi children < 5 years of age before 10-valent pneumococ- cal conjugate vaccine introduction. BMC Public Health 2016;16(1233):1\u201312."
+    },
+    {
+        "id": "doc_340",
+        "document": "23 Yohannes T, Laelago T, Ayele M, Tamrat T. Mor- tality and morbidity trends and predictors of mortality in under-five children with severe acute malnutrition in Hadiya zone, South Ethiopia: a four-year retrospective review of hospital-based records (2012\u20132015). BMC Nutrition 2017; 3(1): 18. https://doi.org/10.1186/ s40795-017-0135-5"
+    },
+    {
+        "id": "doc_341",
+        "document": "24 Enarson P M, Gie R P, Mwansambo C C, Chalira A E. potentially modifiable factors associated with Death of Infants and Children with Severe Pneumonia Rou- tinely Managed in District Hospitals in Malawi. PLoS One 2015; 10(8): 1\u201313.\n\n25 Arpitha G, Rehman G A. Effect of Severity of Mal- nutrition on Pneumonia in Childern Aged 2M-5Y at a Tertiary Care Center in Khammam , Andhra Pradesh : A Clinical Study. Scholars Journal of Applied Medical Scienc- es (SJAMS) 2014; 2(6E): 3199\u20133203."
+    },
+    {
+        "id": "doc_342",
+        "document": "26 Onyango D, Kikuvi G, Amukoye E, Jared O. Risk factors of severe pneumonia among children aged 2-59 months in western Kenya: a case control study. Pan Afr Med J 2012; 8688: 1\u201313.\n\n1710\n\nAfrican Health Sciences, Vol 21 Issue 4, December, 2021"
+    }
+]
