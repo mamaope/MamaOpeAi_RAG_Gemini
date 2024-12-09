@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Dict, Optional
 
 class DiagnosisInput(BaseModel):
-    patient_data: Dict[str, str]
+    patient_data: str
     chat_history: Optional[str] = ""
 
 class DiagnosisResponse(BaseModel):

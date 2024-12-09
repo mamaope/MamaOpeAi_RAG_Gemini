@@ -19,7 +19,7 @@ retriever = vectorstore.as_retriever(
 @router.post("/diagnose", response_model=DiagnosisResponse)
 async def diagnose(data: DiagnosisInput):
     try:
-        query = " ".join(data.patient_data.values())
+        query = " ".join(data.patient_data)
         response, diagnosis_complete = generate_response(
             query=query,
             chat_history=data.chat_history,
