@@ -4,9 +4,10 @@ import google.generativeai as genai
 
 from google.api_core import retry
 from langchain_community.vectorstores import FAISS
+from langchain.embeddings.base import Embeddings
 from typing import List
 
-class GeminiEmbeddingFunction():
+class GeminiEmbeddingFunction(Embeddings):
     # Specify whether to generate embeddings for documents, or queries
     document_mode = True
 
@@ -62,7 +63,7 @@ def load_documents_to_db():
 
 def retrieve_context(query, retriever):
     embed_fn.document_mode = False
-    results = retriever.get_relevant_documents(query)
+    results = retriever.invoke(query)
     context = "\n".join([result.page_content for result in results])
     # print(f"Retrieved Context for Query '{query}':")
     # print(context)
