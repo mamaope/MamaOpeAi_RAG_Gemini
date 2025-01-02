@@ -1,9 +1,11 @@
 import json
 import os
 import google.generativeai as genai
+import numpy as np
 
 from google.api_core import retry
 from langchain_community.vectorstores import FAISS
+from faiss import IndexFlatL2, IndexHNSWFlat
 from langchain.embeddings.base import Embeddings
 from typing import List
 
@@ -36,30 +38,42 @@ class GeminiEmbeddingFunction(Embeddings):
 
 embed_fn = GeminiEmbeddingFunction()
 
-# Load documents and IDs into FAISS
-def load_documents_to_db():
+VECTORSTORE_DIR = "vectorstore/"
 
-    root_dir = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
-    file_path = os.path.join(root_dir, "documents.json")
-
+def save_vectorstore_to_disk():
+    """Create and save the vector store."""
     try:
+        print("Loading documents...")
+        root_dir = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
+        file_path = os.path.join(root_dir, "documents.json")
+
         with open(file_path, "r") as json_file:
             data = json.load(json_file)
-        texts = [item["document"] for item in data]
-        metadatas = [{"id": item["id"]} for item in data] 
 
-        # print(f"Sample Texts: {texts[:3]}") 
-        # print(f"Sample Metadata: {metadatas[:3]}")  
+        texts = [item["document"] for item in data]
+        metadatas = [{"id": item["id"]} for item in data]
         # Create FAISS vector store
         vectorstore = FAISS.from_texts(
             texts=texts,
             embedding=embed_fn,
             metadatas=metadatas
         )
-        print("FAISS vector store created successfully!")
+       
+        vectorstore.save_local(VECTORSTORE_DIR)
+        print("Vector store saved successfully.")
+    except Exception as e:
+        print(f"Error saving vector store: {e}")
+
+def load_vectorstore_from_disk():
+    """Load vector store from disk."""
+    try:
+        print("Loading vector store from disk...")
+        vectorstore = FAISS.load_local(VECTORSTORE_DIR, embeddings=embed_fn, allow_dangerous_deserialization=True)
+        print("Vector store loaded successfully.")
         return vectorstore
     except Exception as e:
-        print(f"Error during FAISS DB operations: {str(e)}")    
+        print(f"Failed to load vector store: {e}")
+        return None
 
 def retrieve_context(query, retriever):
     embed_fn.document_mode = False
