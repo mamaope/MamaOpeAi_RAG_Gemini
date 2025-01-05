@@ -1,8 +1,9 @@
 from fastapi import FastAPI
 from app.models.schemas import DiagnosisInput, DiagnosisResponse
 from app.services.conversational_service import generate_response
-from app.services.vectordb_service import load_vectorstore_from_disk, save_vectorstore_to_disk
+from app.services.vectordb_service import load_vectorstore_from_s3, create_vectorstore
 from app.routers import diagnosis
+from app.services.vectorstore_manager import initialize_vectorstore
 
 # Initialize FastAPI app
 app = FastAPI(
@@ -12,12 +13,10 @@ app = FastAPI(
 
 @app.on_event("startup")
 async def startup_event():
+    global vectorstore
     print("Starting up...")
-    # Load the vector store
-    vectorstore = load_vectorstore_from_disk()
-    if not vectorstore:
-        print("Vector store not found. Building a new one...")
-        save_vectorstore_to_disk()
+    initialize_vectorstore()
+
 
 @app.get("/")
 def read_root():
