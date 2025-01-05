@@ -1,31 +1,15 @@
 from fastapi import APIRouter, HTTPException, Depends
 from app.models.schemas import DiagnosisInput, DiagnosisResponse
 from app.services.conversational_service import generate_response
-from app.services.vectordb_service import load_vectorstore_from_disk
+from app.services.vectordb_service import load_vectorstore_from_s3
+from app.services.vectorstore_manager import get_vectorstore
 
 # Initialize router
 router = APIRouter()
 
-vectorstore = None
-
 def get_retriever():
-    global vectorstore
-    if not vectorstore:
-        vectorstore = load_vectorstore_from_disk()
-        if not vectorstore:
-            raise HTTPException(status_code=500, detail="Vector store failed to load.")
+    vectorstore = get_vectorstore()
     return vectorstore.as_retriever(search_type="similarity", search_kwargs={"k": 5})
-
-
-# # Load FAISS vector store and retriever
-# vectorstore = load_documents_to_db()
-# if not vectorstore:
-#     raise Exception("Failed to load FAISS vector store.")
-
-# retriever = vectorstore.as_retriever(
-#     search_type="similarity", 
-#     search_kwargs={"k": 5}
-# )
 
 @router.post("/diagnose", response_model=DiagnosisResponse)
 async def diagnose(data: DiagnosisInput, retriever=Depends(get_retriever)):
