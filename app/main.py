@@ -17,7 +17,6 @@ async def startup_event():
     print("Starting up...")
     initialize_vectorstore()
 
-
 @app.get("/")
 def read_root():
     return {"message": "Welcome to the MamaOpe AI RAG API!"}
