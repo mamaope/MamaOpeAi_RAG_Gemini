@@ -9,7 +9,11 @@ router = APIRouter()
 
 def get_retriever():
     vectorstore = get_vectorstore()
-    return vectorstore.as_retriever(search_type="similarity", search_kwargs={"k": 5})
+    retriever = vectorstore.as_retriever(
+        search_type="similarity", 
+        search_kwargs={"k": 3}
+    )
+    return retriever
 
 @router.post("/diagnose", response_model=DiagnosisResponse)
 async def diagnose(data: DiagnosisInput, retriever=Depends(get_retriever)):

@@ -5,70 +5,114 @@ import numpy as np
 import boto3
 import shutil
 import tarfile
+import faiss
 from google.api_core import retry
 from langchain_community.vectorstores import FAISS
 from langchain.embeddings.base import Embeddings
+from langchain.schema import Document
+from langchain_community.docstore.in_memory import InMemoryDocstore
 from typing import List
 from dotenv import load_dotenv
+from uuid import uuid4
 
 load_dotenv()
 
 AWS_S3_BUCKET = os.getenv("AWS_S3_BUCKET")
 VECTORSTORE_S3_PREFIX = "output/vectorstore/"
+EMBEDDINGS_S3_PREFIX = "output/"
 
 class GeminiEmbeddingFunction(Embeddings):
-    # Specify whether to generate embeddings for documents, or queries
-    document_mode = True
-
-    def embed_documents(self, texts: List[str]) -> List[List[float]]:
-        # print(f"Embedding documents (first 5): {texts[:5]}")  
-        self.document_mode = True 
-        return self.__call__(texts)
+    document_mode = False
+    target_dim = 3072
 
     def embed_query(self, text: str) -> List[float]:
-        self.document_mode = False 
-        return self.__call__([text])[0]
+        embedding = self.__call__([text])[0]
+        return self._extend_embedding(embedding)
+
+    def embed_documents(self, texts: List[str]) -> List[List[float]]:
+        return [self._extend_embedding(embedding) for embedding in self.__call__(texts)]
 
     def __call__(self, input: List[str]) -> List[List[float]]:
-        # Embedding logic using Gemini's model
-        embedding_task = "retrieval_document" if self.document_mode else "retrieval_query"
         retry_policy = {"retry": retry.Retry(predicate=retry.if_transient_error)}
-
         response = genai.embed_content(
             model="models/text-embedding-004",
             content=input,
-            task_type=embedding_task,
+            task_type="retrieval_query" if not self.document_mode else "retrieval_document",
             request_options=retry_policy,
         )
-        embeddings = response["embedding"]
-        return embeddings
+        return response["embedding"]
 
-embed_fn = GeminiEmbeddingFunction()
+    def _extend_embedding(self, embedding: List[float]) -> List[float]:
+        return embedding + [0.0] * (self.target_dim - len(embedding))
+    
+embed_fn = GeminiEmbeddingFunction()    
 
 def create_vectorstore():
-    """Create FAISS vector store and upload to S3"""
+    """Create FAISS vector store using already-embedded data from S3."""
     try:
-        print("Loading documents...")
-        root_dir = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
-        file_path = os.path.join(root_dir, "documents.json")
+        print("Fetching processed files from S3...")
+        s3 = boto3.client("s3")
 
-        with open(file_path, "r") as json_file:
-            data = json.load(json_file)
+        # List all JSON files in the output/ folder
+        response = s3.list_objects_v2(Bucket=AWS_S3_BUCKET, Prefix=EMBEDDINGS_S3_PREFIX)
+        files = [obj["Key"] for obj in response.get("Contents", []) if obj["Key"].endswith(".json")]
 
-        texts = [item["document"] for item in data]
-        metadatas = [{"id": item["id"]} for item in data]
+        texts = []
+        embeddings = []
+        metadatas = []
+
+        # Process each JSON file
+        for file_key in files:
+            obj = s3.get_object(Bucket=AWS_S3_BUCKET, Key=file_key)
+            data = json.load(obj["Body"])
+
+            for record in data:
+                text = record.get("text", "").strip()
+                metadata = record.get("metadata", {})
+                embedding = record.get("embeddings")
+
+                if text and len(text) > 20 and embedding:
+                    texts.append(text)
+                    metadatas.append(metadata)
+                    embeddings.append(embedding)
+
+        if not texts or not embeddings:
+            raise ValueError("No valid documents or embeddings found.")        
+
+        # Convert embeddings to a NumPy array
+        embeddings_np = np.array(embeddings, dtype=np.float32)
+
+        # Create FAISS index 
+        dimension = embeddings_np.shape[1]  # Get embedding dimension
+        index = faiss.IndexFlatL2(dimension)
+        index.add(embeddings_np)
+
+        # Create sequential IDs and docstore
+        docstore = {}
+        index_to_docstore_id = {}
+        
+        for i in range(len(texts)):
+            doc_id = f"doc_{i}"
+            docstore[doc_id] = Document(
+                page_content=texts[i],
+                metadata=metadatas[i]
+            )
+            index_to_docstore_id[i] = doc_id
 
         # Create FAISS vector store
-        vectorstore = FAISS.from_texts(
-            texts=texts,
-            embedding=embed_fn,
-            metadatas=metadatas
+        print("Creating FAISS vector store...")
+        vectorstore = FAISS(
+            embedding_function=embed_fn,
+            index=index,
+            docstore=InMemoryDocstore(docstore),
+            index_to_docstore_id=index_to_docstore_id
         )
 
-        # Upload vector store to S3
-        print("Uploading vector store to S3...")
+        # Save and upload vector store to S3
+        print(f"Created vectorstore with {len(docstore)} documents")
         upload_vectorstore_to_s3(vectorstore)
-        print("Vector store created and uploaded successfully.")
+        return vectorstore
+    
     except Exception as e:
         print(f"Error creating vector store: {e}")
 
@@ -129,10 +173,21 @@ def load_vectorstore_from_s3():
         print(f"Error loading vector store from S3: {e}")
         return None
     
-def retrieve_context(query, retriever):
-    results = retriever.invoke(query)
-    context = "\n".join([result.page_content for result in results])
-    # print(f"Retrieved Context for Query '{query}':")
-    # print(context)
-    return context
- 
+def retrieve_context(query: str, retriever) -> str:
+    query = ' '.join(query.split())
+    try:
+        results = retriever.invoke(query)
+        if not results:
+            return "No relevant documents found."
+            
+        # Combine results with source tracking
+        contexts = []
+        for doc in results:
+            source = doc.metadata.get('filename', 'Unknown source')
+            contexts.append(f"From {source}:\n{doc.page_content}\n")
+            
+        return "\n".join(contexts)
+        
+    except Exception as e:
+        print(f"Retrieval error: {e}")
+        raise

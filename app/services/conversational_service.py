@@ -11,50 +11,77 @@ GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 genai.configure(api_key=GOOGLE_API_KEY)
 
 PROMPT_TEMPLATE = """
-You are an experienced doctor specializing in respiratory illnesses.
-You are assisting another doctor in diagnosing a patient.
-You can only use the provided reference text to guide your responses.
+You are respiratory disease specialist specializing in respiratory illnesses particulary TB, pneumonia, or other conditions. 
+Your role is to assist doctors by analyzing information and providing evidence-based insights STRICTLY from the provided reference materials.
 
-Patient Data:
-{patient_data}
-=========
-Reference Text:
+REFERENCE KNOWLEDGE:
 {context}
-=========
-Chat History:
+
+PATIENT INFORMATION:
+{patient_data}
+
+CONVERSATION HISTORY:
 {chat_history}
-=========
+
+INTERACTION RULES:
+
 Based on the patient data and reference text:
+- Rely strictly on the reference text for your response.
 - If more information is needed, ask one leading question to gather relevant details.
 - If you have enough information, provide a diagnosis (TB, pneumonia, or other conditions) and suggest further tests or treatments.
 
-Response:
+1. EVIDENCE BASIS
+- Only use information explicitly stated in the reference text
+- If suggesting something not in references, clearly mark it as "Unable to confirm from references"
+- If more information is needed, ask one leading question to gather relevant details.
+
+2. DIAGNOSTIC PROCESS
+- Maximum 6 questions before providing recommendations, or diagnosis. Don't number the questions just ask them as though asking someone face to face.
+
+3. DECISION POINTS
+- After each answer, evaluate:
+  * If sufficient information → Proceed to recommendations
+  * If insufficient → Ask ONE specific question
+  * If uncertain → Clearly state limitations
+
+4. FINAL RECOMMENDATIONS OR PRELIMINARY DIAGNOSIS
+- Must include:
+  * Evidence-based findings (with reference text support)
+  * Confidence level (High/Medium/Low)
+  * Clear disclaimer about clinical judgment
+  * Specific recommendations for additional tests/consultations
+
+Remember: You are a support tool. Final clinical decisions rest with the healthcare provider.
 """
 
 def generate_response(query: str, chat_history: str, patient_data: str, retriever):
+    try:
+        # Retrieve context
+        context = retrieve_context(query, retriever)
+        # print(f"Retrieved context length: {len(context)}")
+        # print(f"Context preview: {context[:200]}...")
+        # print(f"Query: {query}")
 
-    # Retrieve context
-    context = retrieve_context(query, retriever)
+        # Populate prompt
+        prompt = PROMPT_TEMPLATE.format(
+            patient_data=patient_data,
+            context=context,
+            chat_history=chat_history or "No previous conversation",
+        )
 
-    # Populate prompt
-    prompt = PROMPT_TEMPLATE.format(
-        patient_data=patient_data,
-        context=context,
-        chat_history=chat_history,
-    )
+        # Generate model response
+        model = genai.GenerativeModel("gemini-1.5-pro-latest")
+        response = model.generate_content(prompt).text
 
-    # print("Generated Prompt:")
-    # print(prompt)
-    # Generate model response
-    model = genai.GenerativeModel("gemini-1.5-pro-latest")
-    response = model.generate_content(prompt).text
-
-    # Check if the response is complete
-    diagnosis_complete = any(
-        keyword in response.lower()
-        for keyword in ["diagnosis, recommendation", "suggest"]
-    )
-    return response, diagnosis_complete
+        # Check for diagnosis completion
+        diagnosis_keywords = ["diagnosis:", "recommend:", "suggest:", "assessment:"]
+        diagnosis_complete = any(keyword in response.lower() for keyword in diagnosis_keywords)
+        
+        return response, diagnosis_complete
+    
+    except Exception as e:
+        print(f"Error generating response: {str(e)}")
+        raise
 
 # def generate_response(query, retriever):
    
