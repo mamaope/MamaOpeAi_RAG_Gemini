@@ -19,6 +19,9 @@ def get_retriever():
 async def diagnose(data: DiagnosisInput, retriever=Depends(get_retriever)):
     try:
         query = " ".join(data.patient_data)
+
+        formatted_chat_history = data.chat_history if data.chat_history else ""
+
         response, diagnosis_complete = generate_response(
             query=query,
             chat_history=data.chat_history,
@@ -26,8 +29,10 @@ async def diagnose(data: DiagnosisInput, retriever=Depends(get_retriever)):
             retriever=retriever
         )
 
-        # Append the model's response to chat history
-        updated_chat_history = f"{data.chat_history}\nModel: {response}"
+        if formatted_chat_history:
+            updated_chat_history = f"{formatted_chat_history}\nUser: {data.patient_data}\nModel: {response}"
+        else:
+            updated_chat_history = f"User: {data.patient_data}\nModel: {response}"
 
         return DiagnosisResponse(
             model_response=response,
