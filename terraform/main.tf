@@ -155,23 +155,6 @@ resource "aws_instance" "mamaopeai" {
   }            
 }
 
-# Elastic IP for Static IP Address
-resource "aws_eip" "mamaopeai_eip" {
-  domain = "vpc"
-  tags = {
-    Name = "MamaOpeAI Elastic IP"
-  }
-  lifecycle {
-    prevent_destroy = true
-  }
-}
-
-# Associate Elastic IP with the EC2 Instance
-resource "aws_eip_association" "mamaopeai_eip_assoc" {
-  instance_id   = aws_instance.mamaopeai.id
-  allocation_id = aws_eip.mamaopeai_eip.id
-}
-
 # S3 Bucket for .env
 resource "aws_s3_bucket" "env_bucket" {
   bucket = "mamaopeai-api-env-bucket"
