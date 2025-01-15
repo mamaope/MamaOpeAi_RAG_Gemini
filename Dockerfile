@@ -5,10 +5,8 @@ WORKDIR /app
 
 # Install system dependencies required for faiss-cpu
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    build-essential \
-    swig \
-    g++ \
-    && rm -rf /var/lib/apt/lists/*
+    build-essential swig g++ \
+    && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Install dependencies in a virtual environment
 RUN python -m venv /opt/venv
