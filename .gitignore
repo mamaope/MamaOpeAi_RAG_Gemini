@@ -1,3 +1,9 @@
 __pycache__/
 mamaopeai-env/
 .env
+.terraform/
+.terraform.lock.hcl
+terraform.tfstate
+terraform.tfstate.backup
+terraform.plan
+terraform.tfstate.*
