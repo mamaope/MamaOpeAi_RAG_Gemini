@@ -6,9 +6,9 @@ from typing import Dict
 
 load_dotenv()
 
-GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 
-genai.configure(api_key=GOOGLE_API_KEY)
+genai.configure(api_key=GEMINI_API_KEY)
 
 PROMPT_TEMPLATE = """
 You are an experienced respiratory disease specialist focusing on TB and pneumonia diagnosis. Your role is to assist another doctor by analyzing patient information using ONLY the provided reference materials.
