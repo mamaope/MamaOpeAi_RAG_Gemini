@@ -1,7 +1,4 @@
 from fastapi import FastAPI
-from app.models.schemas import DiagnosisInput, DiagnosisResponse
-from app.services.conversational_service import generate_response
-from app.services.vectordb_service import load_vectorstore_from_s3, create_vectorstore
 from app.routers import diagnosis
 from app.services.vectorstore_manager import initialize_vectorstore
 from fastapi.middleware.cors import CORSMiddleware
