@@ -30,6 +30,9 @@ ENV PATH="/opt/venv/bin:$PATH"
 # Copy the application code
 COPY . .
 
+# Make sure the credentials file has the right permissions
+RUN if [ -f "regal-autonomy-454806-d1-51289c3215c0.json" ]; then chmod 600 regal-autonomy-454806-d1-51289c3215c0.json; fi
+
 EXPOSE 8090
 
 # Run the uvicorn application server

@@ -1,3 +1,4 @@
+import app.auth
 from fastapi import FastAPI
 from app.routers import diagnosis
 from app.services.vectorstore_manager import initialize_vectorstore
@@ -20,8 +21,9 @@ app.add_middleware(
 @app.on_event("startup")
 async def startup_event():
     global vectorstore
-    print("Starting up...")
+    print("Starting up MamaOpe AI RAG API...")
     initialize_vectorstore()
+    print("Startup complete")
 
 @app.get("/")
 def read_root():

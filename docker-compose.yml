@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   api:
     build:
@@ -11,6 +9,7 @@ services:
       - .env  
     environment:
       - ENV=production
+      - GOOGLE_APPLICATION_CREDENTIALS=/app/regal-autonomy-454806-d1-51289c3215c0.json
       - LOG_LEVEL=info
     restart: unless-stopped
     

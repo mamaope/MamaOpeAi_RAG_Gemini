@@ -10,7 +10,9 @@ def get_retriever():
     vectorstore = get_vectorstore()
     retriever = vectorstore.as_retriever(
         search_type="similarity", 
-        search_kwargs={"k": 4}
+        search_kwargs={
+            "k": 8, 
+        }
     )
     return retriever
 
