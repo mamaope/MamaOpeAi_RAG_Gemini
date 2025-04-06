@@ -1,6 +1,5 @@
 import app.auth
 import langchain
-print(f"LangChain version: {langchain.__version__}")
 import asyncio
 from app.services.vectorstore_manager import initialize_vectorstore, get_vectorstore
 from app.services.vectordb_service import retrieve_context
