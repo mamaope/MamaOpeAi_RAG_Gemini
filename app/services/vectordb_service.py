@@ -260,9 +260,7 @@ def retrieve_context(query: str, patient_data: str, retriever) -> str:
     if patient_data and patient_data.strip():
         enhanced_query = f"{query} {patient_data}"
         enhanced_query = ' '.join(enhanced_query.split())
-    
-    print(f"Enhanced query: {enhanced_query}")
-    
+        
     try:
         relevant_documents = retriever.invoke(enhanced_query)
 
@@ -272,11 +270,11 @@ def retrieve_context(query: str, patient_data: str, retriever) -> str:
         # Post-retrieval filtering for relevance
         filtered_documents = []
         for doc in relevant_documents:
-            print(f"Checking relevance for document: {doc.page_content[:50]}...")
+            # print(f"Checking relevance for document: {doc.page_content[:50]}...")
             if is_relevant_content(doc.page_content):
                 filtered_documents.append(doc)
-            else:
-                print(f"Document filtered out: {doc.page_content[:50]}...")
+            # else:
+            #     print(f"Document filtered out: {doc.page_content[:50]}...")
         
         if not filtered_documents:
             return "No relevant documents found after filtering."
