@@ -25,6 +25,8 @@ def initialize_vectorstore():
 
 def get_vectorstore():
     """Get the initialized vectorstore."""
-    if not vectorstore:
+    if vectorstore is None:
         raise RuntimeError("Vector store is not initialized.")
     return vectorstore
+
+initialize_vectorstore()

@@ -9,6 +9,7 @@ import app.auth
 from dotenv import load_dotenv
 from typing import Dict
 from google.api_core import exceptions
+from tenacity import retry, stop_after_attempt, wait_exponential
 
 # Load environment variables
 load_dotenv()
@@ -60,6 +61,7 @@ YOUR TASK:
    - Format your response as:
          - **Impression:** [Bullet list of key impressions with a concise reason for each, max 5 bullets] 
          - **Further Management:** [Bullet list of next steps, tests, treatments, or referrals, max 5 bullets]
+         - *This application is designed to provide supportive health information and should be used only under the guidance of a qualified doctor or healthcare provider.*
 
 RULES:
 - For pediatric patients, use age-appropriate vital sign ranges from reference materials.
@@ -70,12 +72,14 @@ RULES:
 - If 7 questions are reached, provide your best assessment with the available information and do not ask futher questions.
 - Use plain, conversational language with clear clinical reasoning.
 - Keep responses short and focused: avoid lengthy explanations, and limit explanations to maximum 5 concise points.
+- Only include the disclaimer (in italics) when providing an Impression and Further Management.
 """
 
 def is_diagnosis_complete(response: str) -> bool:
     response_lower = response.lower().strip()
     return "question:" not in response_lower    
 
+@retry(stop=stop_after_attempt(3), wait=wait_exponential(multiplier=1, min=4, max=10))
 async def generate_response(query: str, chat_history: str, patient_data: str, retriever):
     """Generate a diagnostic response using the LLM and retrieved context."""
     try:
@@ -83,7 +87,8 @@ async def generate_response(query: str, chat_history: str, patient_data: str, re
         
         # Retrieve context
         context = retrieve_context(query, patient_data, retriever)
-        # print(f"Retrieved context: {context[:500]}...")
+        # retrieval_time = time.time() - start_time
+        # start_time = time.time()
 
         # Count prior questions
         question_count = chat_history.count("Question:") if chat_history else 0
@@ -107,7 +112,10 @@ async def generate_response(query: str, chat_history: str, patient_data: str, re
             max_output_tokens=3000,
             top_p=0.9,
         )
+        start = time.time()
         response = await model.generate_content_async(prompt, generation_config=generation_config)
+        inference_time = time.time() - start
+        # print(f"Retrieval: {retrieval_time:.2f}s, Inference: {inference_time:.2f}s")
         response_text = response.text
 
         # output_token_estimate = len(response_text) // 4
@@ -120,7 +128,7 @@ async def generate_response(query: str, chat_history: str, patient_data: str, re
         return response_text, diagnosis_complete
     
     except exceptions.ResourceExhausted:
-        raise HTTPException(status_code=429, detail="Rate limit exceeded, please try again later.")
+        raise HTTPException(status_code=429, detail="Rate limit exceeded or resource unavailable, please try again later.")
     except exceptions.GoogleAPIError as e:
         raise HTTPException(status_code=500, detail=f"Model error: {str(e)}")
     except Exception as e:
