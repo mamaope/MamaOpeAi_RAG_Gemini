@@ -254,31 +254,19 @@ def load_vectorstore_from_s3():
     
 def retrieve_context(query: str, patient_data: str, retriever) -> str:
     """Retrieve relevant context for the query based on semantic similarity."""
-    
     # Combine query with patient data
-    enhanced_query = query
-    if patient_data and patient_data.strip():
-        enhanced_query = f"{query} {patient_data}"
-        enhanced_query = ' '.join(enhanced_query.split())
+    enhanced_query = f"{query} {patient_data}".strip() if patient_data else query
         
     try:
         relevant_documents = retriever.invoke(enhanced_query)
-
         if not relevant_documents:
             return "No relevant documents found."
         
         # Post-retrieval filtering for relevance
-        filtered_documents = []
-        for doc in relevant_documents:
-            # print(f"Checking relevance for document: {doc.page_content[:50]}...")
-            if is_relevant_content(doc.page_content):
-                filtered_documents.append(doc)
-            # else:
-            #     print(f"Document filtered out: {doc.page_content[:50]}...")
-        
+        filtered_documents = [doc for doc in relevant_documents if is_relevant_content(doc.page_content)]
         if not filtered_documents:
             return "No relevant documents found after filtering."
-        
+           
         # Combine results with source tracking
         contexts = []
         for doc in filtered_documents:
