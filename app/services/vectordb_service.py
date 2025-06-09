@@ -1,284 +1,253 @@
 import json
 import os
 import numpy as np
-import boto3
-import shutil
-import tarfile
-import faiss
 import app.auth
 import re
-from langchain_community.vectorstores import FAISS
-from langchain.embeddings.base import Embeddings
-from langchain.schema import Document
+import time
+import random
+from langchain.docstore.document import Document
 from langchain_community.docstore.in_memory import InMemoryDocstore
-from vertexai.language_models import TextEmbeddingModel
 from typing import List, Optional
 from dotenv import load_dotenv
-from openai import AzureOpenAI
-from azure.core.credentials import AzureKeyCredential
+from .vector_search_manager import VectorSearchManager
+from .embedding_service import embed_fn
+from .document_utils import chunk_text, fetch_processed_documents, estimate_tokens
 
-# Load environment variables
 load_dotenv()
 
-# Initialize environment variables
-AWS_S3_BUCKET = os.getenv("AWS_S3_BUCKET")
-VECTORSTORE_S3_PREFIX = "output/vectorstore/"
-EMBEDDINGS_S3_PREFIX = "output/"
+class VectorStore:
+    def __init__(self, project_id: str, location: str):
+        self.vector_search = VectorSearchManager(project_id=project_id, location=location)
+        self.docstore = InMemoryDocstore({})
+        self.index_to_docstore_id = {}
+        self.embedding_function = embed_fn
 
-class EmbeddingFunction(Embeddings):
-    """Embedding function using Azure OpenAI's text-embedding-3-large model since its the same
-    embedding moodel that was used to create the document embeddings in Unstructured.io."""
-    _client = None
-
-    def __init__(self):
-        pass
-
-    @property
-    def client(self):
-        """Lazily load the Azure OpenAI client when first needed."""
-        if EmbeddingFunction._client is None:
-            try:
-                print("Initializing Azure OpenAI client")
-                api_key = os.getenv("AZURE_OPENAI_API_KEY")
-                endpoint = os.getenv("AZURE_OPENAI_ENDPOINT")
-                if not api_key or not endpoint:
-                    raise ValueError("Azure OpenAI API key or endpoint not set.")
-                EmbeddingFunction._client = AzureOpenAI(
-                    api_version= os.getenv("API_VERSION"),  
-                    azure_endpoint= endpoint,
-                    api_key=api_key
-                )
-                print("Azure OpenAI client initialized successfully")
-            except Exception as e:
-                print(f"Error initializing Azure OpenAI client: {e}")
-                raise
-        return EmbeddingFunction._client
-
-    def embed_query(self, text: str) -> List[float]:
-        """Generate an embedding for a single query text."""
-        embedding = self._embed([text])
-        while isinstance(embedding, (list, tuple)) and embedding and isinstance(embedding[0], (list, tuple)):
-            embedding = embedding[0]
-        return embedding
-
-    def embed_documents(self, texts: List[str]) -> List[List[float]]:
-        """Generate embeddings for a list of documents."""
-        embeddings = self._embed(texts)
-        for i, embedding in enumerate(embeddings):
-            while isinstance(embedding, (list, tuple)) and embedding and isinstance(embedding[0], (list, tuple)):
-                print(f"Flattening nested embedding at index {i}: {embedding[:5]}...")
-                embedding = embedding[0]
-            embeddings[i] = embedding
-        return embeddings
-
-    def _embed(self, input: List[str]) -> List[List[float]]:
-        """Core embedding logic using Azure OpenAI."""
-        try:
-            response = self.client.embeddings.create(
-                input=input,
-                model= os.getenv("MODEL_NAME")
-            )
+    def create_and_upload(self, texts: List[str], metadatas: List[dict]):
+        # Log some info about the texts
+        print(f"Processing {len(texts)} text chunks for embedding and vector storage")
+        
+        # Validate text sizes before embedding
+        max_token_limit = 15000  # Reduced from 20000 for safety
+        valid_texts = []
+        valid_metadatas = []
+        
+        for i, text in enumerate(texts):
+            token_count = estimate_tokens(text)
+            if token_count > max_token_limit:
+                print(f"Skipping oversized text at index {i} ({token_count} tokens)")
+                continue
             
-            # Get embeddings from response
-            embeddings = [item.embedding for item in response.data]    
-            return embeddings
-        except Exception as e:
-            print(f"Embedding error: {e}")
-            raise
-        
-# Initialize the embedding function
-embed_fn = EmbeddingFunction()
+            # Add valid texts to processing queue
+            valid_texts.append(text)
+            valid_metadatas.append(metadatas[i])
+            
+        print(f"After filtering, {len(valid_texts)}/{len(texts)} texts will be processed")
 
-def is_relevant_content(text: str) -> bool:
-    # Skip very short or empty content
-    if len(text.strip()) < 30:
-        return False    
-    
-    # patterns for noisy sections to exclude
-    noisy_patterns = [
-        r"^(References|Bibliography|Foreword|Preface|Acknowledgements|Acknowledgment|Index|Appendix)$",
-        r"^(Page \d+ of \d+)$",
-        r"^\d+\.\s+[A-Za-z]+.*\d{4};.*https?://doi\.org",  # Matches references with DOIs
-        r"^\d+\.\s+[A-Za-z]+.*\d{4};.*\d+:\d+",  # Matches references with journal format (e.g., "2003;7:426–31")
-        r"^[A-Za-z]+ [A-Za-z]+\..*\d{4};.*https?://doi\.org",  # Matches references starting with author names and DOIs
-        r"^[A-Za-z]+ [A-Za-z]+\..*\d{4};.*\d+:\d+"  # Matches references starting with author names and journal format
-    ]
-
-    # Check if the text matches any noisy pattern
-    for pattern in noisy_patterns:
-        if re.match(pattern, text, re.IGNORECASE):
-            return False    
-        
-    return True
-
-def create_vectorstore():
-    """Create FAISS vector store using already-embedded data from S3."""
-    try:
-        print("Fetching processed files from S3...")
-        s3 = boto3.client("s3")
-
-        # List all JSON files in the output/ folder
-        response = s3.list_objects_v2(Bucket=AWS_S3_BUCKET, Prefix=EMBEDDINGS_S3_PREFIX)
-        files = [obj["Key"] for obj in response.get("Contents", []) if obj["Key"].endswith(".json")]
-
-        texts = []
+        # Embed in smaller batches with retry logic
+        batch_size = 20  # Smaller batches to avoid quota issues
         embeddings = []
-        metadatas = []
-
-        # Process each JSON file
-        for file_key in files:
-            obj = s3.get_object(Bucket=AWS_S3_BUCKET, Key=file_key)
-            data = json.load(obj["Body"])
-
-            for record in data:
-                text = record.get("text", "").strip()
-                metadata = record.get("metadata", {})
-                embedding = record.get("embeddings")
-                # Only include relevant content
-                if text and embedding and is_relevant_content(text):
-                    # Add more context to metadata
-                    metadata.update({
-                        "source": metadata.get("filename", "Unknown"),
-                        "content_length": len(text),
-                    })
-                    texts.append(text)
-                    metadatas.append(metadata)
-                    # Ensure embedding is a list of floats
-                    if isinstance(embedding, list):
-                        embeddings.append(embedding)
+        
+        for i in range(0, len(valid_texts), batch_size):
+            # Get current batch
+            end_idx = min(i + batch_size, len(valid_texts))
+            batch_texts = valid_texts[i:end_idx]
+            
+            print(f"Processing batch {i//batch_size + 1}/{(len(valid_texts) + batch_size - 1)//batch_size}: {len(batch_texts)} texts")
+            
+            # Try embedding with backoff
+            max_retries = 5
+            retry_count = 0
+            batch_embeddings = None
+            
+            while retry_count < max_retries and batch_embeddings is None:
+                try:
+                    # Small delay between batches
+                    if i > 0:
+                        time.sleep(1)  # Pause between batches
+                        
+                    batch_embeddings = self.embedding_function.embed_documents(batch_texts)
+                except Exception as e:
+                    retry_count += 1
+                    error_str = str(e)
+                    
+                    if "429" in error_str or "quota" in error_str.lower() or "limit" in error_str.lower():
+                        # Rate limit hit - backoff exponentially
+                        wait_time = (2 ** retry_count) + random.uniform(0, 1)
+                        print(f"Rate limit hit, backing off for {wait_time:.1f}s (attempt {retry_count}/{max_retries})")
+                        
+                        # If multiple retries, reduce batch size
+                        if retry_count > 2 and batch_size > 5:
+                            old_size = batch_size
+                            batch_size = max(5, batch_size // 2)
+                            print(f"Reducing batch size from {old_size} to {batch_size}")
+                            
+                            # Recalculate batch with new size
+                            end_idx = min(i + batch_size, len(valid_texts))
+                            batch_texts = valid_texts[i:end_idx]
+                        
+                        time.sleep(wait_time)
                     else:
-                        print(f"Warning: Skipping malformed embedding for text: {text[:50]}...")
-                        continue
+                        print(f"Error embedding batch: {error_str}")
+                        if retry_count < max_retries:
+                            time.sleep(2)
+                        else:
+                            raise
+            
+            # If we couldn't embed after max retries, skip batch
+            if batch_embeddings is None:
+                print(f"Failed to embed batch after {max_retries} retries, skipping")
+                continue
+                
+            embeddings.extend(batch_embeddings)
 
-        if not texts or not embeddings:
-            raise ValueError("No valid documents or embeddings found.")        
-
-        # Convert embeddings to a NumPy array
-        embeddings_np = np.array(embeddings, dtype=np.float32)
-        # Validate the shape of the embeddings
-        print(f"Embeddings shape: {embeddings_np.shape}")
-        if len(embeddings_np.shape) != 2:
-            raise ValueError(f"Invalid embeddings shape: {embeddings_np.shape}. Expected 2D array.")
-
-        # Create FAISS index 
-        dimension = embeddings_np.shape[1]  # Get embedding dimension
-        index = faiss.IndexFlatL2(dimension)
-        index.add(embeddings_np)
-
-        # Create sequential IDs and docstore
-        docstore = {}
-        index_to_docstore_id = {}
+        # Validate embeddings
+        print(f"Validating {len(embeddings)} embeddings")
+        valid_embeddings = []
+        final_texts = []
+        final_metadatas = []
         
-        for i in range(len(texts)):
+        for i, (embedding, text, metadata) in enumerate(zip(embeddings, valid_texts, valid_metadatas)):
+            if self.embedding_function.validate_embedding(embedding):
+                valid_embeddings.append(embedding)
+                final_texts.append(text)
+                final_metadatas.append(metadata)
+            else:
+                print(f"Invalid embedding at index {i} - skipping")
+        
+        # Convert to numpy array
+        if len(valid_embeddings) == 0:
+            raise ValueError("No valid embeddings generated. Cannot proceed.")
+            
+        print(f"Preparing {len(valid_embeddings)} valid embeddings for upload")
+        embeddings_np = np.array(valid_embeddings, dtype=np.float32)
+        
+        # Generate IDs and store documents
+        ids = []
+        for i, (text, metadata) in enumerate(zip(final_texts, final_metadatas)):
             doc_id = f"doc_{i}"
-            docstore[doc_id] = Document(
-                page_content=texts[i],
-                metadata=metadatas[i]
-            )
-            index_to_docstore_id[i] = doc_id
+            self.docstore._dict[doc_id] = Document(page_content=text, metadata=metadata)
+            self.index_to_docstore_id[i] = doc_id
+            ids.append(doc_id)
+        
+        # Upload to vector store with retry logic
+        max_upload_retries = 3
+        upload_retry = 0
+        upload_success = False
+        
+        while upload_retry < max_upload_retries and not upload_success:
+            try:
+                print(f"Uploading {len(ids)} embeddings to Vector Search (attempt {upload_retry+1}/{max_upload_retries})")
+                self.vector_search.upload_embeddings(embeddings_np.tolist(), ids)
+                upload_success = True
+                print(f"Successfully uploaded {len(ids)} embeddings to Vector Search")
+            except Exception as e:
+                upload_retry += 1
+                error_str = str(e)
+                print(f"Error during upload: {error_str}")
+                
+                if upload_retry < max_upload_retries:
+                    wait_time = (2 ** upload_retry) + random.uniform(0, 1)
+                    print(f"Retrying upload in {wait_time:.1f}s")
+                    time.sleep(wait_time)
+                else:
+                    print("Failed all upload attempts")
+                    raise
+        
+        print("Vector store creation complete")
 
-        # Create FAISS vector store
-        print(f"Creating FAISS vector store with {len(docstore)} documents...")
-        vectorstore = FAISS(
-            embedding_function=embed_fn,
-            index=index,
-            docstore=InMemoryDocstore(docstore),
-            index_to_docstore_id=index_to_docstore_id
-        )
-
-        # Save and upload vector store to S3
-        print(f"Created vectorstore with {len(docstore)} documents")
-        upload_vectorstore_to_s3(vectorstore)
-        return vectorstore
+    def as_retriever(self, search_type: str = "similarity", search_kwargs: dict = None):
+        return VectorSearchRetriever(self)
     
+class VectorSearchRetriever:
+    def __init__(self, vector_store: VectorStore):
+        self.vector_store = vector_store
+        self.search_kwargs = {"k": 5} if search_kwargs is None else search_kwargs
+
+    def invoke(self, query: str):
+        # Apply retry logic for embedding the query
+        max_retries = 3
+        retry_count = 0
+        query_embedding = None
+        
+        while retry_count < max_retries and query_embedding is None:
+            try:
+                query_embedding = self.vector_store.embedding_function.embed_query(query)
+            except Exception as e:
+                retry_count += 1
+                error_str = str(e)
+                
+                if "429" in error_str or "quota" in error_str.lower():
+                    wait_time = (2 ** retry_count) + random.uniform(0, 1)
+                    print(f"Rate limit hit during query embedding. Retrying in {wait_time:.1f}s ({retry_count}/{max_retries})")
+                    time.sleep(wait_time)
+                else:
+                    print(f"Error embedding query: {error_str}")
+                    if retry_count < max_retries:
+                        time.sleep(1)
+                    else:
+                        raise
+        
+        if query_embedding is None:
+            raise RuntimeError(f"Failed to generate query embedding after {max_retries} attempts")
+            
+        if not self.vector_store.embedding_function.validate_embedding(query_embedding):
+            raise ValueError("Invalid query embedding")
+            
+        # Apply retry logic for search
+        search_retries = 3
+        search_count = 0
+        neighbors = None
+        
+        while search_count < search_retries and neighbors is None:
+            try:
+                neighbors = self.vector_store.vector_search.search(query_embedding, top_k=self.search_kwargs["k"])
+            except Exception as e:
+                search_count += 1
+                error_str = str(e)
+                print(f"Error during search: {error_str}")
+                
+                if search_count < search_retries:
+                    wait_time = (2 ** search_count) + random.uniform(0, 1)
+                    print(f"Retrying search in {wait_time:.1f}s")
+                    time.sleep(wait_time)
+                else:
+                    raise
+        
+        if neighbors is None:
+            raise RuntimeError(f"Failed to search after {search_retries} attempts")
+            
+        return [
+            self.vector_store.docstore._dict[self.vector_store.index_to_docstore_id[int(neighbor.id)]]
+            for neighbor in neighbors
+        ]
+    
+def create_vectorstore():
+    project_id = os.getenv("GCP_ID")
+    location = os.getenv("GCP_LOCATION")
+    bucket_name = os.getenv("GCS_BUCKET")
+    
+    print(f"Fetching and processing documents from bucket: {bucket_name}")
+    texts, metadatas = fetch_processed_documents(bucket_name)
+    
+    if not texts:
+        raise ValueError("No valid documents found or processed")
+    
+    print(f"Creating vector store with {len(texts)} text chunks")
+    vectorstore = VectorStore(project_id=project_id, location=location)
+    vectorstore.create_and_upload(texts, metadatas)
+    return vectorstore    
+
+def load_vectorstore():
+    project_id = os.getenv("GCP_ID")
+    location = os.getenv("GCP_LOCATION")
+    return VectorStore(project_id=project_id, location=location)    
+
+if __name__ == "__main__":
+    try:
+        print("Starting vector store creation process...")
+        create_vectorstore()
+        print("Vector store creation completed successfully")
     except Exception as e:
-        print(f"Error creating vector store: {e}")
+        print(f"ERROR during vector store creation: {str(e)}")
         raise
-
-def upload_vectorstore_to_s3(vectorstore: FAISS):
-    """Upload FAISS vector store files to S3."""
-    try:
-        s3 = boto3.client("s3")
-
-        # Create a temporary directory to save vector store
-        temp_dir = "/tmp/vectorstore"
-        shutil.rmtree(temp_dir, ignore_errors=True)  # Clean up if it already exists
-        os.makedirs(temp_dir, exist_ok=True)
-
-        # Save vector store to the temporary directory
-        vectorstore.save_local(temp_dir)
-
-        # Compress the directory
-        compressed_file = "/tmp/vectorstore.tar.gz"
-        with tarfile.open(compressed_file, "w:gz") as tar:
-            tar.add(temp_dir, arcname=".")
-
-        # Upload the compressed file to S3
-        s3.upload_file(
-            Filename=compressed_file,
-            Bucket=AWS_S3_BUCKET,
-            Key=VECTORSTORE_S3_PREFIX + "vectorstore.tar.gz",
-        )
-
-        print("Vector store uploaded successfully to S3.")
-    except Exception as e:
-        print(f"Error uploading vector store to S3: {e}")
-
-def load_vectorstore_from_s3():
-    """Load the FAISS vector store directly from S3."""
-    try:
-        print("Loading vector store from S3...")
-        s3 = boto3.client("s3")
-
-        # Download the compressed vector store
-        compressed_file = "/tmp/vectorstore.tar.gz"
-        s3.download_file(
-            Bucket=AWS_S3_BUCKET,
-            Key=VECTORSTORE_S3_PREFIX + "vectorstore.tar.gz",
-            Filename=compressed_file,
-        )
-
-        # Extract the compressed file
-        temp_dir = "/tmp/vectorstore"
-        shutil.rmtree(temp_dir, ignore_errors=True)  # Clean up if it already exists
-        with tarfile.open(compressed_file, "r:gz") as tar:
-            tar.extractall(path=temp_dir)
-
-        # Load the vector store
-        vectorstore = FAISS.load_local(temp_dir, embeddings=embed_fn, allow_dangerous_deserialization=True)
-        print("Vector store loaded successfully from S3.")
-        return vectorstore
-    except Exception as e:
-        print(f"Error loading vector store from S3: {e}")
-        return None
-    
-def retrieve_context(query: str, patient_data: str, retriever) -> str:
-    """Retrieve relevant context for the query based on semantic similarity."""
-    # Combine query with patient data
-    enhanced_query = f"{query} {patient_data}".strip() if patient_data else query
-        
-    try:
-        relevant_documents = retriever.invoke(enhanced_query)
-        if not relevant_documents:
-            return "No relevant documents found."
-        
-        # Post-retrieval filtering for relevance
-        filtered_documents = [doc for doc in relevant_documents if is_relevant_content(doc.page_content)]
-        if not filtered_documents:
-            return "No relevant documents found after filtering."
-           
-        # Combine results with source tracking
-        contexts = []
-        for doc in filtered_documents:
-            source = doc.metadata.get('filename', 'Unknown source')
-            source = source.replace('.pdf', '')
-            content = doc.page_content
-            contexts.append(f"From {source}:\n{content}\n")
-
-        return "\n".join(contexts)
-    except Exception as e:
-        print(f"Retrieval error: {e}")
-        import traceback
-        print(f"Traceback: {traceback.format_exc()}")
-        return f"An error occurred during retrieval: {str(e)}"
     

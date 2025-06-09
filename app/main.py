@@ -1,7 +1,7 @@
 import app.auth
 from fastapi import FastAPI
 from app.routers import diagnosis
-from app.services.vectorstore_manager import initialize_vectorstore
+from app.services.vector_store_manager import initialize_vectorstore
 from fastapi.middleware.cors import CORSMiddleware
 
 # Initialize FastAPI app

@@ -1,7 +1,8 @@
 from fastapi import APIRouter, HTTPException, Depends
 from app.models.schemas import DiagnosisInput, DiagnosisResponse
-from app.services.vectorstore_manager import get_vectorstore
+from app.services.vector_store_manager import get_vectorstore
 from app.services.conversational_service import generate_response
+from app.services.vectordb_service import VectorSearchRetriever
 
 # Initialize router
 router = APIRouter()
@@ -19,7 +20,7 @@ def get_retriever():
 @router.post("/diagnose", response_model=DiagnosisResponse)
 async def diagnose(data: DiagnosisInput, retriever=Depends(get_retriever)):
     try:
-        query = " ".join(data.patient_data)
+        query = " ".join(data.patient_data.split())
 
         formatted_chat_history = data.chat_history if data.chat_history else ""
 

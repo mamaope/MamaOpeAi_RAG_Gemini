@@ -10,6 +10,8 @@ from dotenv import load_dotenv
 from typing import Dict
 from google.api_core import exceptions
 from tenacity import retry, stop_after_attempt, wait_exponential
+from .vectordb_service import VectorSearchRetriever
+from .vector_store_manager import get_vectorstore
 
 # Load environment variables
 load_dotenv()
@@ -21,16 +23,16 @@ a well-supported diagnosis or recommendation.
 
 IMPORTANT: Follow all rules provided in the RULES section below without exception.
 
-REFERENCE TEXT TO USE:
+**Relevant Medical Guidelines and Context:**
 {context}
 
-PATIENT'S CURRENT INFORMATION:
+**Patient Data:**
 {patient_data}
 
-PREVIOUS CONVERSATION:
+**Conversation History:**
 {chat_history}
 
-YOUR TASK:
+**YOUR TASK:**
 1. ALWAYS START with an assessment of vital signs:
    - IMMEDIATELY ALERT the doctor if any life-threatening conditions exist (e.g., heart rate, respiratory rate, oxygen saturation, temperature, or blood pressure outside safe ranges).
    - Do NOT repeat the vital sign values in your response unless they are dangerous and require an alert. 
@@ -63,47 +65,69 @@ YOUR TASK:
          - **Further Management:** [Bullet list of next steps, tests, treatments, or referrals, max 5 bullets]
          - *This application is designed to provide supportive health information and should be used only under the guidance of a qualified doctor or healthcare provider.*
 
-RULES:
+**RULES:**
 - For pediatric patients, use age-appropriate vital sign ranges from reference materials.
 - Flag ANY dangerous condition IMMEDIATELY at the start of your response.
 - Always remain evidence-based but DO NOT include any citations, references, or page numbers in your final output.
 - While your primary focus is on respiratory conditions specifially TB and Pneumonia, do not ignore signs that may indicate other serious illnesses.
-- Limit to 7 questions total across the conversation; track this by reviewing the chat history for previous "Question:" entries.
-- If 7 questions are reached, provide your best assessment with the available information and do not ask futher questions.
+- Limit to 10 questions total across the conversation; track this by reviewing the chat history for previous "Question:" entries.
+- If 10 questions are reached, provide your best assessment with the available information and do not ask futher questions.
 - Use plain, conversational language with clear clinical reasoning.
 - Keep responses short and focused: avoid lengthy explanations, and limit explanations to maximum 5 concise points.
 - Only include the disclaimer (in italics) when providing an Impression and Further Management.
+
+**Query:**
+{query}
+
+**Response:**
 """
 
 def is_diagnosis_complete(response: str) -> bool:
     response_lower = response.lower().strip()
     return "question:" not in response_lower    
 
+async def retrieve_context(query: str, patient_data: str, retriever: VectorSearchRetriever) -> str:
+    enhanced_query = f"{query} {patient_data}".strip() if patient_data else query
+    try:
+        relevant_documents = retriever.invoke(enhanced_query)
+        if not relevant_documents:
+            return "No relevant documents found."
+        
+        contexts = []
+        for doc in relevant_documents:
+            source = doc.metadata.get('source', 'Unknown source').replace('.pdf', '')
+            content = doc.page_content
+            contexts.append(f"From {source}:\n{content}\n")
+        
+        return "\n".join(contexts)
+    except Exception as e:
+        print(f"Retrieval error: {e}")
+        return f"An error occurred during retrieval: {str(e)}"
+
 @retry(stop=stop_after_attempt(3), wait=wait_exponential(multiplier=1, min=4, max=10))
-async def generate_response(query: str, chat_history: str, patient_data: str, retriever):
+async def generate_response(query: str, chat_history: str, patient_data: str, retriever: VectorSearchRetriever):
     """Generate a diagnostic response using the LLM and retrieved context."""
     try:
         start_time = time.time()
+                
+        context_start = time.time()
+        context = await retrieve_context(query, patient_data, retriever)
+        retrieval_time = time.time() - context_start
         
-        # Retrieve context
-        context = retrieve_context(query, patient_data, retriever)
-        # retrieval_time = time.time() - start_time
-        # start_time = time.time()
+        print(f"Retrieved context for query '{query}': {context[:500]}...")
 
         # Count prior questions
         question_count = chat_history.count("Question:") if chat_history else 0
-        if question_count >= 7:
-            context += "\nNote: Maximum of 7 questions reached; provide an assessment with available data."
+        if question_count >= 10:
+            context += "\nNote: Maximum of 10 questions reached; provide an assessment with available data."
         
         # Populate prompt
         prompt = PROMPT_TEMPLATE.format(
             patient_data=patient_data,
             context=context,
             chat_history=chat_history or "No previous conversation",
+            query=query
         )
-
-        # input_token_estimate = len(prompt) // 4
-        # print(f"Estimated input tokens: {input_token_estimate}")
 
         # Generate model response with vertex AI
         model = GenerativeModel("gemini-1.5-pro-002")
@@ -112,18 +136,15 @@ async def generate_response(query: str, chat_history: str, patient_data: str, re
             max_output_tokens=3000,
             top_p=0.9,
         )
-        start = time.time()
+        inference_start = time.time()
         response = await model.generate_content_async(prompt, generation_config=generation_config)
-        inference_time = time.time() - start
-        # print(f"Retrieval: {retrieval_time:.2f}s, Inference: {inference_time:.2f}s")
-        response_text = response.text
+        inference_time = time.time() - inference_start
 
-        # output_token_estimate = len(response_text) // 4
-        # print(f"Estimated output tokens: {output_token_estimate}")
+        response_text = response.text
         diagnosis_complete = is_diagnosis_complete(response_text)
         
-        # latency = time.time() - start_time
-        # print(f"Latency: {latency:.2f}s")
+        total_latency = time.time() - start_time
+        print(f"Retrieval: {retrieval_time:.2f}s, Inference: {inference_time:.2f}s, Total: {total_latency:.2f}s")
 
         return response_text, diagnosis_complete
     

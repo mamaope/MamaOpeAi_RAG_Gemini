@@ -7,3 +7,5 @@ terraform.tfstate
 terraform.tfstate.backup
 terraform.plan
 terraform.tfstate.*
+.repomix/
+cache/
