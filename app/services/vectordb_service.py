@@ -273,11 +273,23 @@ def retrieve_context(query: str, patient_data: str, retriever) -> tuple[str, lis
         contexts = []
         actual_sources = set()  # Use set to avoid duplicates
         source_content_map = {}  # Track which content comes from which source
+        detailed_sources = []  # Track sources with page numbers
         
         for doc in filtered_documents:
             source = doc.metadata.get('filename', 'Unknown source')
             source = source.replace('.pdf', '')
+            page_number = doc.metadata.get('page_number', None)
+            
+            # Create detailed source reference with page number if available
+            if page_number is not None:
+                detailed_source = f"{source}, page {page_number}"
+                source_with_page = f"{source} (p. {page_number})"
+            else:
+                detailed_source = source
+                source_with_page = source
+            
             actual_sources.add(source)
+            detailed_sources.append(detailed_source)
             content = doc.page_content
             
             # Store content by source for reference
@@ -285,22 +297,24 @@ def retrieve_context(query: str, patient_data: str, retriever) -> tuple[str, lis
                 source_content_map[source] = []
             source_content_map[source].append(content)
             
-            # Format context with clear source attribution
-            contexts.append(f"[SOURCE: {source}]\n{content}\n")
+            # Format context with clear source attribution including page numbers
+            contexts.append(f"[SOURCE: {source_with_page}]\n{content}\n")
 
         # Debug: Print actual sources extracted from knowledge base
         print(f"DEBUG - Actual KB sources extracted: {list(actual_sources)}")
+        print(f"DEBUG - Detailed sources with pages: {detailed_sources}")
 
         # Create a summary of sources and their key content types
         source_summary = []
-        for source in actual_sources:
-            source_summary.append(f"- {source}: Contains relevant clinical guidelines and criteria")
+        for detailed_source in detailed_sources:
+            source_summary.append(f"- {detailed_source}: Contains relevant clinical guidelines and criteria")
 
         final_context = "\n".join(contexts)
         if source_summary:
             final_context += f"\n\nSOURCE SUMMARY:\n" + "\n".join(source_summary)
 
-        return final_context, list(actual_sources)
+        # Return detailed sources instead of just source names
+        return final_context, detailed_sources
     except Exception as e:
         print(f"Retrieval error: {e}")
         import traceback
