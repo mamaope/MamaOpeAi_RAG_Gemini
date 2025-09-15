@@ -31,7 +31,7 @@ ENV PATH="/opt/venv/bin:$PATH"
 COPY . .
 
 # Make sure the credentials file has the right permissions
-RUN if [ -f "regal-autonomy-454806-d1-51289c3215c0.json" ]; then chmod 600 regal-autonomy-454806-d1-51289c3215c0.json; fi
+RUN if [ -f "regal-autonomy-454806-d1-edf68610c57a.json" ]; then chmod 600 regal-autonomy-454806-d1-edf68610c57a.json; fi
 
 EXPOSE 8090
 

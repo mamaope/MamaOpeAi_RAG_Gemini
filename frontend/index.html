@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MamaOpe AI Diagnosis Chat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="chat-container">
+        <header class="chat-header">
+            <h1>🏥 MamaOpe AI Diagnosis Assistant</h1>
+            <p>Medical diagnostic support powered by AI</p>
+        </header>
+        
+        <div class="chat-messages" id="chatMessages">
+            <div class="system-message">
+                <p>Welcome! Please enter patient information and symptoms for diagnostic assistance.</p>
+                <p><strong>Example format:</strong><br>
+                Patient: 3-year-old child<br>
+                Symptoms: Persistent cough for 2 weeks, fever, difficulty breathing<br>
+                Vital signs: Temperature 38.5°C, HR 120 bpm, RR 35/min</p>
+            </div>
+        </div>
+        
+        <div class="chat-input-container">
+            <div class="input-group">
+                <textarea 
+                    id="messageInput" 
+                    placeholder="Enter patient case details (symptoms, vital signs, history, etc.)..."
+                    rows="3"
+                ></textarea>
+                <button id="sendButton" onclick="sendMessage()">
+                    <span id="buttonText">Send</span>
+                    <span id="loadingSpinner" class="spinner" style="display: none;">⏳</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 

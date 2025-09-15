@@ -252,33 +252,58 @@ def load_vectorstore_from_s3():
         print(f"Error loading vector store from S3: {e}")
         return None
     
-def retrieve_context(query: str, patient_data: str, retriever) -> str:
-    """Retrieve relevant context for the query based on semantic similarity."""
+def retrieve_context(query: str, patient_data: str, retriever) -> tuple[str, list[str]]:
+    """Retrieve relevant context for the query based on semantic similarity.
+    Returns: (context_text, list_of_actual_sources)
+    """
     # Combine query with patient data
     enhanced_query = f"{query} {patient_data}".strip() if patient_data else query
         
     try:
         relevant_documents = retriever.invoke(enhanced_query)
         if not relevant_documents:
-            return "No relevant documents found."
+            return "No relevant documents found.", []
         
         # Post-retrieval filtering for relevance
         filtered_documents = [doc for doc in relevant_documents if is_relevant_content(doc.page_content)]
         if not filtered_documents:
-            return "No relevant documents found after filtering."
+            return "No relevant documents found after filtering.", []
            
         # Combine results with source tracking
         contexts = []
+        actual_sources = set()  # Use set to avoid duplicates
+        source_content_map = {}  # Track which content comes from which source
+        
         for doc in filtered_documents:
             source = doc.metadata.get('filename', 'Unknown source')
             source = source.replace('.pdf', '')
+            actual_sources.add(source)
             content = doc.page_content
-            contexts.append(f"From {source}:\n{content}\n")
+            
+            # Store content by source for reference
+            if source not in source_content_map:
+                source_content_map[source] = []
+            source_content_map[source].append(content)
+            
+            # Format context with clear source attribution
+            contexts.append(f"[SOURCE: {source}]\n{content}\n")
 
-        return "\n".join(contexts)
+        # Debug: Print actual sources extracted from knowledge base
+        print(f"DEBUG - Actual KB sources extracted: {list(actual_sources)}")
+
+        # Create a summary of sources and their key content types
+        source_summary = []
+        for source in actual_sources:
+            source_summary.append(f"- {source}: Contains relevant clinical guidelines and criteria")
+
+        final_context = "\n".join(contexts)
+        if source_summary:
+            final_context += f"\n\nSOURCE SUMMARY:\n" + "\n".join(source_summary)
+
+        return final_context, list(actual_sources)
     except Exception as e:
         print(f"Retrieval error: {e}")
         import traceback
         print(f"Traceback: {traceback.format_exc()}")
-        return f"An error occurred during retrieval: {str(e)}"
+        return f"An error occurred during retrieval: {str(e)}", []
     
