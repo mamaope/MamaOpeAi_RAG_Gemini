@@ -8,6 +8,7 @@ from fastapi.middleware.cors import CORSMiddleware
 app = FastAPI(
     title="MamaOpe AI RAG API", 
     description="API for conversational diagnosis using FAISS vector store and Gemini as base model."
+    root_path="/api/v1"
 )
 
 app.add_middleware(
@@ -29,7 +30,7 @@ async def startup_event():
 def read_root():
     return {"message": "Welcome to the MamaOpe AI RAG API!"}
 
-app.include_router(diagnosis.router, prefix="/api/v1", tags=["Diagnosis"])
+app.include_router(diagnosis.router, tags=["Diagnosis"])
 
 if __name__ == "__main__":
     import uvicorn
