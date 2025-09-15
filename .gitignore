@@ -1,6 +1,7 @@
 __pycache__/
 mamaopeai-env/
 .env
+rag_venv/
 .terraform/
 .terraform.lock.hcl
 terraform.tfstate

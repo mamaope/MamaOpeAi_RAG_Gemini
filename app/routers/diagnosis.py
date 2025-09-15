@@ -19,9 +19,8 @@ def get_retriever():
 @router.post("/diagnose", response_model=DiagnosisResponse)
 async def diagnose(data: DiagnosisInput, retriever=Depends(get_retriever)):
     try:
-        query = " ".join(data.patient_data)
-
-        formatted_chat_history = data.chat_history if data.chat_history else ""
+        # patient_data is already a string from the schema
+        query = data.patient_data
 
         response, diagnosis_complete = await generate_response(
             query=query,
@@ -30,8 +29,8 @@ async def diagnose(data: DiagnosisInput, retriever=Depends(get_retriever)):
             retriever=retriever
         )
 
-        if formatted_chat_history:
-            updated_chat_history = f"{formatted_chat_history}\Doctor: {data.patient_data}\nModel: {response}"
+        if data.chat_history:
+            updated_chat_history = f"{data.chat_history}\nDoctor: {data.patient_data}\nModel: {response}"
         else:
             updated_chat_history = f"Doctor: {data.patient_data}\nModel: {response}"
 

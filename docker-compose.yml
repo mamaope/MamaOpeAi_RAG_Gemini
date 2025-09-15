@@ -2,14 +2,18 @@ services:
   api:
     build:
       context: .
-    container_name: mamaopeai_rag_api
+    container_name: mamaopeai_rag_api_1
     ports:
       - "8090:8090"
     env_file:
       - .env  
     environment:
-      - ENV=production
-      - GOOGLE_APPLICATION_CREDENTIALS=/app/regal-autonomy-454806-d1-51289c3215c0.json
+      - ENV=development
+      - GOOGLE_APPLICATION_CREDENTIALS=/app/regal-autonomy-454806-d1-edf68610c57a.json
       - LOG_LEVEL=info
+    volumes:
+      - .:/app  # Mount current directory to /app in container for hot reloading
+      - /app/rag_venv  # Exclude the virtual environment directory
+    command: ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8090", "--reload"]
     restart: unless-stopped
     
