@@ -5,12 +5,13 @@ import time
 import re
 from fastapi import HTTPException
 from vertexai.generative_models import GenerativeModel, GenerationConfig
-from app.services.vectordb_service import retrieve_context
 import app.auth
 from dotenv import load_dotenv
 from typing import Dict, Tuple, Any
 from google.api_core import exceptions
 from tenacity import retry, stop_after_attempt, wait_exponential
+from langchain_core.retrievers import BaseRetriever
+from app.services.vectordb_service import retrieve_context
 
 # # Load environment variables
 # load_dotenv()
@@ -354,6 +355,9 @@ IMPORTANT: Follow all rules provided in the RULES section below without exceptio
 **Relevant Medical Guidelines and Context:**
 {context}
 
+**Available Knowledge Base Sources:**
+{sources}
+
 **Patient Data:**
 {patient_data}
 
@@ -391,18 +395,20 @@ IMPORTANT: Follow all rules provided in the RULES section below without exceptio
    - Format your response as:
          - **Impression:** [Bullet list of key impressions with a concise reason for each, max 5 bullets] 
          - **Further Management:** [Bullet list of next steps, tests, treatments, or referrals, max 5 bullets]
+         - **Sources:** [List the knowledge base sources you referenced: {sources}]
          - *This application is designed to provide supportive health information and should be used only under the guidance of a qualified doctor or healthcare provider.*
 
 **RULES:**
 - For pediatric patients, use age-appropriate vital sign ranges from reference materials.
 - Flag ANY dangerous condition IMMEDIATELY at the start of your response.
-- Always remain evidence-based but DO NOT include any citations, references, or page numbers in your final output.
+- Always remain evidence-based and cite relevant sources when making clinical recommendations.
 - While your primary focus is on respiratory conditions specifially TB and Pneumonia, do not ignore signs that may indicate other serious illnesses.
 - Limit to 10 questions total across the conversation; track this by reviewing the chat history for previous "Question:" entries.
 - If 10 questions are reached, provide your best assessment with the available information and do not ask futher questions.
 - Use plain, conversational language with clear clinical reasoning.
 - Keep responses short and focused: avoid lengthy explanations, and limit explanations to maximum 5 concise points.
 - Only include the disclaimer (in italics) when providing an Impression and Further Management.
+- ALWAYS include the sources section when providing clinical assessments.
 
 **Query:**
 {query}
@@ -414,45 +420,32 @@ def is_diagnosis_complete(response: str) -> bool:
     response_lower = response.lower().strip()
     return "question:" not in response_lower    
 
-async def retrieve_context(query: str, patient_data: str, retriever: Any) -> str:
-    enhanced_query = f"{query} {patient_data}".strip() if patient_data else query
-    try:
-        relevant_documents = retriever.invoke(enhanced_query)
-        if not relevant_documents:
-            return "No relevant documents found."
-        
-        contexts = []
-        for doc in relevant_documents:
-            source = doc.metadata.get('source', 'Unknown source').replace('.pdf', '')
-            content = doc.page_content
-            contexts.append(f"From {source}:\n{content}\n")
-        
-        return "\n".join(contexts)
-    except Exception as e:
-        print(f"Retrieval error: {e}")
-        return f"An error occurred during retrieval: {str(e)}"
-
 @retry(stop=stop_after_attempt(3), wait=wait_exponential(multiplier=1, min=4, max=10))
-async def generate_response(query: str, chat_history: str, patient_data: str, retriever: Any):
+async def generate_response(query: str, chat_history: str, patient_data: str, retriever: BaseRetriever):
     """Generate a diagnostic response using the LLM and retrieved context."""
     try:
         start_time = time.time()
                 
         context_start = time.time()
-        context = await retrieve_context(query, patient_data, retriever)
+        context, actual_sources = retrieve_context(query, patient_data, retriever)
         retrieval_time = time.time() - context_start
         
         print(f"Retrieved context for query '{query}': {context[:500]}...")
+        print(f"Sources found: {actual_sources}")
 
         # Count prior questions
         question_count = chat_history.count("Question:") if chat_history else 0
         if question_count >= 10:
             context += "\nNote: Maximum of 10 questions reached; provide an assessment with available data."
         
+        # Format sources for display in the prompt
+        sources_text = ", ".join(actual_sources) if actual_sources else "No sources available"
+        
         # Populate prompt
         prompt = PROMPT_TEMPLATE.format(
             patient_data=patient_data,
             context=context,
+            sources=sources_text,
             chat_history=chat_history or "No previous conversation",
             query=query
         )
