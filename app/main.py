@@ -7,7 +7,7 @@ from fastapi.middleware.cors import CORSMiddleware
 # Initialize FastAPI app
 app = FastAPI(
     title="MamaOpe AI RAG API", 
-    description="API for conversational diagnosis using FAISS vector store and Gemini as base model."
+    description="API for conversational diagnosis using FAISS vector store and Gemini as base model.",
     root_path="/api/v1"
 )
 
